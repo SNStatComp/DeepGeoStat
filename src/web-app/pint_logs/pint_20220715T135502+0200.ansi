@@ -1,0 +1,1062 @@
+Script started on 2022-07-15 13:55:02+02:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="423" LINES="100"]
+
+  [90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[90m.[39m
+
+  [90m───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[39m [90mLaravel[39m  
+  [90;42;1m  FIXED  [39;49;22m [90m........................................................................................................................................................................................................................................................................................................................................................................................[39m 171 files, 45 style issues fixed  
+  [32;1m✓[39;22m app/Actions/Jetstream/CreateTeam.php [90m                                                                                                                                                                                                                                                                                                                                         braces, function_declaration, curly_braces_position[39m  
+  [35;1m@@ -[0m[39;1m32[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m32[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m             [0m[37m'default_label_class' [0m[35;1m=> [[0m[37m'nullable'[0m[35;1m, [0m[37m'numeric'[0m[35;1m],[0m
+  [35;1m         ])->[0m[39;1mvalidateWithBag[0m[35;1m([0m[37m'createTeam'[0m[35;1m);[0m
+  [35;1m [0m
+  [31m-        return DB::transaction(function() use($user, $input) {[39m[0m
+  [32m+        return DB::transaction(function () use ($user, $input) {[39m[0m
+  [90;3m             [0m[39;1mAddingTeam[0m[35;1m::[0m[39;1mdispatch[0m[35;1m([0m[39;1m$user[0m[35;1m);[0m
+  [35;1m [0m
+  [35;1m             [0m[39;1m$user[0m[35;1m->[0m[39;1mswitchTeam[0m[35;1m([0m[39;1m$team [0m[35;1m= [0m[39;1m$user[0m[35;1m->[0m[39;1mownedTeams[0m[35;1m()->[0m[39;1mcreate[0m[35;1m([[0m
+  
+  [32;1m✓[39;22m app/Actions/Jetstream/UpdateTeamName.php [90m                                                                                                                                                                                                                                                                                                      braces, curly_braces_position, no_unused_imports, Laravel/laravel_phpdoc_alignment[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Actions\Jetstream;[0m
+  [35;1m [0m
+  [31m-use App\Models\LabelClass;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\DB;[0m
+  [35;1m use Illuminate\Support\Facades\Gate;[0m
+  [35;1m use Illuminate\Support\Facades\Validator;[0m
+  [35;1m@@ -[0m[39;1m14[0m[35;1m,[0m[39;1m9 [0m[35;1m+[0m[39;1m13[0m[35;1m,[0m[39;1m9 [0m[35;1m@@[0m
+  [35;1m     [0m[90;3m/**[0m
+  [90;3m      * Validate and update the given team's name.[0m
+  [90;3m      *[0m
+  [31m-     * @param mixed $user[39m[0m
+  [31m-     * @param mixed $team[39m[0m
+  [31m-     * @param array $input[39m[0m
+  [32m+     * @param  mixed  $user[39m[0m
+  [32m+     * @param  mixed  $team[39m[0m
+  [32m+     * @param  array  $input[39m[0m
+  [90;3m      * @return void[0m
+  [90;3m      */[0m
+  [90;3m     [0m[35;1mpublic function [0m[39;1mupdate[0m[35;1m([0m[39;1m$user[0m[35;1m, [0m[39;1m$team[0m[35;1m, array [0m[39;1m$input[0m[35;1m)[0m
+  
+  [32;1m✓[39;22m app/Enums/RegionTypeEnum.php [90m                                                                                                                                                                                                                                                                                                                                                          class_definition, single_blank_line_at_eof[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m9 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m10 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Enums;[0m
+  [35;1m [0m
+  [31m-enum RegionTypeEnum: string {[39m[0m
+  [32m+enum RegionTypeEnum: string[39m[0m
+  [32m+{[39m[0m
+  [90;3m     [0m[35;1mcase [0m[39;1mProvincie [0m[35;1m= [0m[37m'provincie'[0m[35;1m;[0m
+  [35;1m     case [0m[39;1mGemeente [0m[35;1m= [0m[37m'gemeente'[0m[35;1m;[0m
+  [35;1m     case [0m[39;1mWijk [0m[35;1m= [0m[37m'wijk'[0m[35;1m;[0m
+  [35;1m     case [0m[39;1mBuurt [0m[35;1m= [0m[37m'buurt'[0m[35;1m;[0m
+  [31m-}[39m[0m
+  [35;1m\ [0m[39;1mNo newline at end of file[0m
+  [32m+}[39m[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/AnnotationCampaignController.php [90m                                                                                                                                                                                                                                                                                                                        braces, curly_braces_position, no_extra_blank_lines[39m  
+  [35;1m@@ -[0m[39;1m46[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m46[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m             return [0m[39;1m$annotation[0m[35;1m;[0m
+  [35;1m         });[0m
+  [35;1m [0m
+  [31m-[39m[0m
+  [90;3m         [0m[35;1mreturn [0m[39;1mredirect[0m[35;1m()->[0m[39;1mroute[0m[35;1m([0m[37m'data.annotations.show'[0m[35;1m, [0m[39;1m$annotation[0m[35;1m);[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/AnnotationCampaignGridCellController.php [90m                                                                                                                                                                                                                                                                                                                braces, function_declaration, curly_braces_position[39m  
+  [35;1m@@ -[0m[39;1m24[0m[35;1m,[0m[39;1m12 [0m[35;1m+[0m[39;1m24[0m[35;1m,[0m[39;1m12 [0m[35;1m@@[0m
+  [35;1m             ];[0m
+  [35;1m         }[0m
+  [35;1m [0m
+  [31m-        $labels = array_filter($labels, function($label) {[39m[0m
+  [31m-           if ($label['label_class_id'] !== null) {[39m[0m
+  [31m-               return $label;[39m[0m
+  [31m-           }[39m[0m
+  [32m+        $labels = array_filter($labels, function ($label) {[39m[0m
+  [32m+            if ($label['label_class_id'] !== null) {[39m[0m
+  [32m+                return $label;[39m[0m
+  [32m+            }[39m[0m
+  [90;3m [0m
+  [31m-           return null;[39m[0m
+  [32m+            return null;[39m[0m
+  [90;3m         [0m[35;1m});[0m
+  [35;1m [0m
+  [35;1m         foreach ([0m[39;1m$labels [0m[35;1mas [0m[39;1m$label[0m[35;1m) {[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/DashboardController.php [90m                                                                                                                                                                                                                                                       braces, function_declaration, curly_braces_position, concat_space, single_quote, trailing_comma_in_multiline, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m21 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m21 [0m[35;1m@@[0m
+  [35;1m namespace App\Http\Controllers;[0m
+  [35;1m [0m
+  [35;1m use App\Enums\ExperimentStatusEnum;[0m
+  [32m+use App\Enums\SubsetTypeEnum;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Resources\GridCellResource;[0m
+  [35;1m use App\Http\Resources\PredictionResource;[0m
+  [32m+use App\Http\Traits\CreateSubsetTrait;[39m[0m
+  [32m+use App\Models\Dataset;[39m[0m
+  [32m+use App\Models\Experiment;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Prediction;[0m
+  [32m+use App\Models\Region;[39m[0m
+  [32m+use App\Rules\DatasetsCompatible;[39m[0m
+  [32m+use Illuminate\Http\Request;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Pagination\LengthAwarePaginator;[0m
+  [35;1m use Illuminate\Support\Facades\DB;[0m
+  [31m-use Inertia\Inertia;[39m[0m
+  [31m-use App\Models\Region;[39m[0m
+  [31m-use App\Models\Dataset;[39m[0m
+  [31m-use App\Models\Experiment;[39m[0m
+  [31m-use Illuminate\Http\Request;[39m[0m
+  [31m-use App\Enums\SubsetTypeEnum;[39m[0m
+  [31m-use App\Rules\DatasetsCompatible;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\Http;[0m
+  [35;1m use Illuminate\Validation\Rules\Enum;[0m
+  [31m-use App\Http\Traits\CreateSubsetTrait;[39m[0m
+  [32m+use Inertia\Inertia;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mDashboardController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m39[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m39[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m         [0m[39;1m$perPage [0m[35;1m= ([0m[39;1m$prediction[0m[35;1m->[0m[39;1mdatasets[0m[35;1m->[0m[39;1mcount[0m[35;1m() === [0m[39;1m1[0m[35;1m) ? [0m[39;1m9 [0m[35;1m: [0m[39;1m10[0m[35;1m;[0m
+  [35;1m         [0m[39;1m$labels [0m[35;1m= [0m[39;1m$prediction[0m[35;1m->[0m[39;1mlabels[0m[35;1m()->[0m[39;1mwith[0m[35;1m([0m[37m'gridCell'[0m[35;1m)->[0m[39;1mpaginate[0m[35;1m([0m[39;1m$perPage[0m[35;1m);[0m
+  [31m-        $gridCells = $labels->map(function($label) {[39m[0m
+  [32m+        $gridCells = $labels->map(function ($label) {[39m[0m
+  [90;3m             [0m[35;1mreturn [0m[39;1m$label[0m[35;1m->[0m[39;1mgridCell[0m[35;1m;[0m
+  [35;1m         });[0m
+  [35;1m [0m
+  [35;1m@@ -[0m[39;1m73[0m[35;1m,[0m[39;1m14 [0m[35;1m+[0m[39;1m73[0m[35;1m,[0m[39;1m14 [0m[35;1m@@[0m
+  [35;1m         [0m[39;1m$datasets [0m[35;1m= [0m[39;1mDataset[0m[35;1m::[0m[39;1mfindOrFail[0m[35;1m([0m[39;1m$request[0m[35;1m->[0m[39;1mdatasets[0m[35;1m);[0m
+  [35;1m         [0m[39;1m$gridCells [0m[35;1m= ([0m[39;1m$request[0m[35;1m->[0m[39;1msubset_method [0m[35;1m=== [0m[39;1mnull[0m[35;1m) ? [0m[39;1m$datasets[0m[35;1m[[0m[39;1m0[0m[35;1m]->[0m[39;1mgridCells [0m[35;1m: [0m[39;1m$this[0m[35;1m->[0m[39;1mcreateSubset[0m[35;1m([0m[39;1mSubsetTypeEnum[0m[35;1m::[0m[39;1mfrom[0m[35;1m([0m[39;1m$request[0m[35;1m->[0m[39;1msubset_method[0m[35;1m), [0m[39;1m$datasets[0m[35;1m[[0m[39;1m0[0m[35;1m], [0m[39;1m$request[0m[35;1m);[0m
+  [35;1m [0m
+  [31m-        $labels = collect(Http::post(config('services.api.url') . "/experiments/" . $experiment->id . "/predictions", [[39m[0m
+  [32m+        $labels = collect(Http::post(config('services.api.url').'/experiments/'.$experiment->id.'/predictions', [[39m[0m
+  [90;3m             [0m[37m'information' [0m[35;1m=> [[0m
+  [31m-                'label_classes' => $experiment->team->labelClasses->map(function($labelClass) {[39m[0m
+  [32m+                'label_classes' => $experiment->team->labelClasses->map(function ($labelClass) {[39m[0m
+  [90;3m                     [0m[35;1mreturn [0m[39;1m$labelClass[0m[35;1m->[0m[39;1mname[0m[35;1m;[0m
+  [31m-                })[39m[0m
+  [32m+                }),[39m[0m
+  [90;3m             [0m[35;1m],[0m
+  [35;1m             [0m[37m'data' [0m[35;1m=> [[0m
+  [31m-                'datasets' => $datasets->map(function($dataset) {[39m[0m
+  [32m+                'datasets' => $datasets->map(function ($dataset) {[39m[0m
+  [90;3m                     [0m[35;1mreturn [[0m
+  [35;1m                         [0m[37m'grid_cell_size' [0m[35;1m=> [0m[39;1m$dataset[0m[35;1m->[0m[39;1mgridCells[0m[35;1m()->[0m[39;1mfirst[0m[35;1m()->[0m[39;1mtype[0m[35;1m->[0m[39;1mvalue[0m[35;1m,[0m
+  [35;1m                         [0m[37m'image_type' [0m[35;1m=> [0m[39;1m$dataset[0m[35;1m->[0m[39;1mimage_type[0m[35;1m->[0m[39;1mvalue[0m[35;1m,[0m
+  [35;1m@@ -[0m[39;1m89[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m89[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m                         [0m[37m'image_height' [0m[35;1m=> [0m[39;1m$dataset[0m[35;1m->[0m[39;1mheight[0m[35;1m,[0m
+  [35;1m                     ];[0m
+  [35;1m                 }),[0m
+  [31m-                'grid_cells' => $gridCells->map(function($gridCell) {[39m[0m
+  [32m+                'grid_cells' => $gridCells->map(function ($gridCell) {[39m[0m
+  [90;3m                     [0m[35;1mreturn [0m[39;1m$gridCell[0m[35;1m->[0m[39;1mname[0m[35;1m;[0m
+  [35;1m                 }),[0m
+  [35;1m             ],[0m
+  [35;1m@@ -[0m[39;1m96[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m96[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         ])->[0m[39;1mjson[0m[35;1m());[0m
+  [35;1m [0m
+  [35;1m         [0m[39;1m$labelClasses [0m[35;1m= [0m[39;1m$experiment[0m[35;1m->[0m[39;1mteam[0m[35;1m->[0m[39;1mlabelClasses[0m[35;1m;[0m
+  [31m-        $labels = $labels->map(function($label) use($gridCells, $labelClasses) {[39m[0m
+  [32m+        $labels = $labels->map(function ($label) use ($gridCells, $labelClasses) {[39m[0m
+  [90;3m             [0m[35;1mreturn [[0m
+  [35;1m                 [0m[37m'grid_cell_id' [0m[35;1m=> [0m[39;1m$gridCells[0m[35;1m->[0m[39;1mfirstWhere[0m[35;1m([0m[37m'name'[0m[35;1m, [0m[39;1m$label[0m[35;1m[[0m[37m'grid_cell'[0m[35;1m])->[0m[39;1mid[0m[35;1m,[0m
+  [35;1m                 [0m[37m'label_class_id' [0m[35;1m=> [0m[39;1m$labelClasses[0m[35;1m->[0m[39;1mfirstWhere[0m[35;1m([0m[37m'name'[0m[35;1m, [0m[39;1m$label[0m[35;1m[[0m[37m'label'[0m[35;1m])->[0m[39;1mid[0m[35;1m,[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/DataController.php [90m                                                                                                                                                                                                                                                                                                                                               braces, no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m16 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m15 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Controllers;[0m
+  [35;1m [0m
+  [31m-use App\Enums\RegionTypeEnum;[39m[0m
+  [31m-use Inertia\Inertia;[39m[0m
+  [32m+use App\Models\Dataset;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Region;[0m
+  [31m-use App\Models\Dataset;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Http\Request;[0m
+  [32m+use Inertia\Inertia;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mDataController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m     public function [0m[39;1mindex[0m[35;1m([0m[39;1mRequest $request[0m[35;1m)[0m
+  [31m-    {   [39m[0m
+  [32m+    {[39m[0m
+  [90;3m         [0m[35;1mreturn [0m[39;1mInertia[0m[35;1m::[0m[39;1mrender[0m[35;1m([0m[37m'Data/Index'[0m[35;1m, [[0m
+  [35;1m             [0m[37m'available_datasets' [0m[35;1m=> [0m[39;1mDataset[0m[35;1m::[0m[39;1mwhere[0m[35;1m([0m[37m'published'[0m[35;1m, [0m[39;1mtrue[0m[35;1m)->[0m[39;1mget[0m[35;1m(),[0m
+  [35;1m             [0m[37m'label_classes' [0m[35;1m=> [0m[39;1mauth[0m[35;1m()->[0m[39;1muser[0m[35;1m()->[0m[39;1mcurrentTeam[0m[35;1m->[0m[39;1mlabelClasses[0m[35;1m,[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/DatasetSubsetController.php [90m                                                                                                                                                                                                                                                                                                                        braces, curly_braces_position, single_line_after_imports[39m  
+  [35;1m@@ -[0m[39;1m9[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m9[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m use Illuminate\Support\Facades\DB;[0m
+  [35;1m use Illuminate\Validation\Rules\Enum;[0m
+  [35;1m [0m
+  [31m-[39m[0m
+  [90;3m [0m[35;1mclass [0m[39;1mDatasetSubsetController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m     use [0m[39;1mCreateSubsetTrait[0m[35;1m;[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/ExperimentController.php [90m                                                                                                                                                                                                                                                                                                                                   concat_space, no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m15 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m14 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Controllers;[0m
+  [35;1m [0m
+  [31m-use Inertia\Inertia;[39m[0m
+  [32m+use App\Enums\ExperimentModelTypeEnum;[39m[0m
+  [32m+use App\Enums\ExperimentStatusEnum;[39m[0m
+  [32m+use App\Http\Resources\ExperimentResource;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Experiment;[0m
+  [35;1m use Illuminate\Http\Request;[0m
+  [31m-use App\Models\ExperimentData;[39m[0m
+  [31m-use App\Enums\ExperimentStatusEnum;[39m[0m
+  [32m+use Illuminate\Support\Facades\Http;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Validation\Rules\Enum;[0m
+  [31m-use App\Enums\ExperimentModelTypeEnum;[39m[0m
+  [31m-use App\Http\Resources\ExperimentResource;[39m[0m
+  [31m-use Illuminate\Support\Facades\Http;[39m[0m
+  [32m+use Inertia\Inertia;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mExperimentController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m58[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m57[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m     {[0m
+  [35;1m         return [0m[39;1mInertia[0m[35;1m::[0m[39;1mrender[0m[35;1m([0m[37m'Experiments/Show'[0m[35;1m, [[0m
+  [35;1m             [0m[37m'experiment' [0m[35;1m=> [0m[39;1m$experiment[0m[35;1m,[0m
+  [31m-            'learning_curve_detailed' => Http::get(config('services.api.url') . '/experiments/' . $experiment->id . '/learning/detail')->json(),[39m[0m
+  [31m-            'confusion_matrix' => Http::get(config('services.api.url') . '/experiments/' . $experiment->id . '/confusion')->json(),[39m[0m
+  [32m+            'learning_curve_detailed' => Http::get(config('services.api.url').'/experiments/'.$experiment->id.'/learning/detail')->json(),[39m[0m
+  [32m+            'confusion_matrix' => Http::get(config('services.api.url').'/experiments/'.$experiment->id.'/confusion')->json(),[39m[0m
+  [90;3m         [0m[35;1m]);[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/ExperimentDataController.php [90m                                                                                                                                                                                                                                                                                                                            braces, function_declaration, curly_braces_position[39m  
+  [35;1m@@ -[0m[39;1m22[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m22[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         [0m[39;1m$pagination [0m[35;1m= ([0m[39;1m$data[0m[35;1m->[0m[39;1mdatasets[0m[35;1m->[0m[39;1mcount[0m[35;1m() === [0m[39;1m1[0m[35;1m) ? [0m[39;1m9 [0m[35;1m: [0m[39;1m10[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m         [0m[39;1m$labels [0m[35;1m= [0m[39;1m$data[0m[35;1m->[0m[39;1mlabels[0m[35;1m()->[0m[39;1mpaginate[0m[35;1m([0m[39;1m$pagination[0m[35;1m);[0m
+  [31m-        $gridCells = $labels->map(function($label) {[39m[0m
+  [32m+        $gridCells = $labels->map(function ($label) {[39m[0m
+  [90;3m             [0m[35;1mreturn [0m[39;1m$label[0m[35;1m->[0m[39;1mgridCell[0m[35;1m;[0m
+  [35;1m         });[0m
+  [35;1m         [0m[39;1m$gridCells [0m[35;1m= new [0m[39;1mLengthAwarePaginator[0m[35;1m([0m[39;1m$gridCells[0m[35;1m, [0m[39;1m$labels[0m[35;1m->[0m[39;1mtotal[0m[35;1m(), [0m[39;1m$labels[0m[35;1m->[0m[39;1mperPage[0m[35;1m(), [0m[39;1m$labels[0m[35;1m->[0m[39;1mcurrentPage[0m[35;1m(), [[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/ExperimentDownloadController.php [90m                                                                                                                                                                                                                                                                                                                                braces, curly_braces_position, concat_space[39m  
+  [35;1m@@ -[0m[39;1m10[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m10[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     public function [0m[39;1mdownload[0m[35;1m([0m[39;1mExperiment $experiment[0m[35;1m)[0m
+  [35;1m     {[0m
+  [35;1m         return [0m[39;1mresponse[0m[35;1m()->[0m[39;1mstreamDownload[0m[35;1m(function () use ([0m[39;1m$experiment[0m[35;1m) {[0m
+  [31m-            echo Http::get(config('services.api.url') . '/experiments/' . $experiment->id . '/experiment');[39m[0m
+  [31m-        }, 'Experiment #' . $experiment->id . '.py');[39m[0m
+  [32m+            echo Http::get(config('services.api.url').'/experiments/'.$experiment->id.'/experiment');[39m[0m
+  [32m+        }, 'Experiment #'.$experiment->id.'.py');[39m[0m
+  [90;3m     [0m[35;1m}[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/ExperimentFinishController.php [90m                                                                                                                                                                                                                                                                                                                                                  trailing_comma_in_multiline[39m  
+  [35;1m@@ -[0m[39;1m24[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m24[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m                 [0m[37m'precision' [0m[35;1m=> [0m[39;1m$request[0m[35;1m->[0m[39;1mprecision[0m[35;1m,[0m
+  [35;1m                 [0m[37m'recall' [0m[35;1m=> [0m[39;1m$request[0m[35;1m->[0m[39;1mrecall[0m[35;1m,[0m
+  [35;1m                 [0m[37m'f1_score' [0m[35;1m=> [0m[39;1m$request[0m[35;1m->[0m[39;1mf1_score[0m[35;1m,[0m
+  [31m-            ][39m[0m
+  [32m+            ],[39m[0m
+  [90;3m         [0m[35;1m]);[0m
+  [35;1m [0m
+  [35;1m         return [0m[39;1m$experiment[0m[35;1m;[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/InspectController.php [90m                                                                                                                                                                                                                                                                                                                 braces, method_argument_space, curly_braces_position, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m4[0m[35;1m,[0m[39;1m6 [0m[35;1m+[0m[39;1m4[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m use App\Http\Resources\DatasetResource;[0m
+  [35;1m use App\Http\Resources\GridCellResource;[0m
+  [32m+use App\Http\Traits\ConsolidateDatasetsTrait;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Dataset;[0m
+  [35;1m use App\Models\GridCell;[0m
+  [35;1m use App\Rules\DatasetHasLabelEvidence;[0m
+  [35;1m@@ -[0m[39;1m13[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m14[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m use Illuminate\Pagination\Paginator;[0m
+  [35;1m use Illuminate\Support\Facades\Validator;[0m
+  [35;1m use Inertia\Inertia;[0m
+  [31m-use App\Http\Traits\ConsolidateDatasetsTrait;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mInspectController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m39[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m39[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m             [0m[39;1m$currentPage [0m[35;1m= [0m[39;1mLengthAwarePaginator[0m[35;1m::[0m[39;1mresolveCurrentPage[0m[35;1m();[0m
+  [35;1m             [0m[39;1m$perPage [0m[35;1m= ([0m[39;1m$datasets[0m[35;1m->[0m[39;1mcount[0m[35;1m() === [0m[39;1m1[0m[35;1m) ? [0m[39;1m9 [0m[35;1m: [0m[39;1m10[0m[35;1m;[0m
+  [35;1m [0m
+  [31m-            $labels = new LengthAwarePaginator($labels->slice($perPage * ($currentPage - 1), $perPage)->values(), $total, $perPage , $currentPage);[39m[0m
+  [32m+            $labels = new LengthAwarePaginator($labels->slice($perPage * ($currentPage - 1), $perPage)->values(), $total, $perPage, $currentPage);[39m[0m
+  [90;3m             [0m[39;1m$gridCells [0m[35;1m= new [0m[39;1mLengthAwarePaginator[0m[35;1m([0m[39;1mGridCell[0m[35;1m::[0m[39;1mwhereIn[0m[35;1m([0m[37m'id'[0m[35;1m, [0m[39;1mcollect[0m[35;1m([0m[39;1m$labels[0m[35;1m->[0m[39;1mitems[0m[35;1m())->[0m[39;1mpluck[0m[35;1m([0m[37m'grid_cell_id'[0m[35;1m))->[0m[39;1mget[0m[35;1m(), [0m[39;1m$total[0m[35;1m, [0m[39;1m$perPage[0m[35;1m, [0m[39;1m$currentPage[0m[35;1m, [[0m
+  [35;1m                 [0m[37m'path' [0m[35;1m=> [0m[39;1mPaginator[0m[35;1m::[0m[39;1mresolveCurrentPath[0m[35;1m(),[0m
+  [35;1m                 [0m[37m'query' [0m[35;1m=> [0m[39;1mPaginator[0m[35;1m::[0m[39;1mresolveQueryString[0m[35;1m(),[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/PredictionDownloadController.php [90m                                                                                                                                                                                                                                                            braces, function_declaration, curly_braces_position, concat_space, no_unused_imports, single_line_comment_style[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m namespace App\Http\Controllers;[0m
+  [35;1m [0m
+  [35;1m use App\Models\Prediction;[0m
+  [31m-use Illuminate\Http\Request;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mPredictionDownloadController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m10[0m[35;1m,[0m[39;1m14 [0m[35;1m+[0m[39;1m9[0m[35;1m,[0m[39;1m14 [0m[35;1m@@[0m
+  [35;1m     public function [0m[39;1mdownload[0m[35;1m([0m[39;1mPrediction $prediction[0m[35;1m)[0m
+  [35;1m     {[0m
+  [35;1m         [0m[39;1m$columns [0m[35;1m= [[0m[37m'Grid Cell'[0m[35;1m, [0m[37m'Label'[0m[35;1m];[0m
+  [31m-        $callback = function() use ($prediction, $columns) {[39m[0m
+  [32m+        $callback = function () use ($prediction, $columns) {[39m[0m
+  [90;3m             [0m[39;1m$file [0m[35;1m= [0m[39;1mfopen[0m[35;1m([0m[37m'php://output'[0m[35;1m, [0m[37m'w'[0m[35;1m);[0m
+  [35;1m [0m
+  [31m-            # Put column names to top of CSV file.[39m[0m
+  [32m+            // Put column names to top of CSV file.[39m[0m
+  [90;3m             [0m[39;1mfputcsv[0m[35;1m([0m[39;1m$file[0m[35;1m, [0m[39;1m$columns[0m[35;1m);[0m
+  [35;1m [0m
+  [31m-            # Put the Labels in the CSV file.[39m[0m
+  [31m-            $prediction->labels->each(function($label) use ($file) {[39m[0m
+  [32m+            // Put the Labels in the CSV file.[39m[0m
+  [32m+            $prediction->labels->each(function ($label) use ($file) {[39m[0m
+  [90;3m                 [0m[39;1mfputcsv[0m[35;1m([0m[39;1m$file[0m[35;1m, [[0m
+  [35;1m                     [0m[39;1m$label[0m[35;1m->[0m[39;1mgridCell[0m[35;1m->[0m[39;1mname[0m[35;1m,[0m
+  [35;1m                     [0m[39;1m$label[0m[35;1m->[0m[39;1mlabelClass[0m[35;1m->[0m[39;1mname[0m[35;1m,[0m
+  [35;1m@@ -[0m[39;1m27[0m[35;1m,[0m[39;1m9 [0m[35;1m+[0m[39;1m26[0m[35;1m,[0m[39;1m9 [0m[35;1m@@[0m
+  [35;1m             [0m[39;1mfclose[0m[35;1m([0m[39;1m$file[0m[35;1m);[0m
+  [35;1m         };[0m
+  [35;1m [0m
+  [31m-        return response()->streamDownload($callback, $prediction->name . '.csv', [[39m[0m
+  [32m+        return response()->streamDownload($callback, $prediction->name.'.csv', [[39m[0m
+  [90;3m             [0m[37m'Content-type' [0m[35;1m=> [0m[37m'text/csv'[0m[35;1m,[0m
+  [31m-            'Content-Disposition' => 'attachment; filename=' . $prediction->name . '.csv',[39m[0m
+  [32m+            'Content-Disposition' => 'attachment; filename='.$prediction->name.'.csv',[39m[0m
+  [90;3m             [0m[37m'Pragma' [0m[35;1m=> [0m[37m'no-cache'[0m[35;1m,[0m
+  [35;1m             [0m[37m'Cache-Control' [0m[35;1m=> [0m[37m'must-revalidate, post-check=0, pre-check=0'[0m[35;1m,[0m
+  [35;1m             [0m[37m'Expires' [0m[35;1m=> [0m[37m'0'[0m[35;1m,[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/RegisterController.php [90m                                                                                                                                                                                                                                                                                                                                  braces, function_declaration, curly_braces_position[39m  
+  [35;1m@@ -[0m[39;1m77[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m77[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m             }[0m
+  [35;1m         }[0m
+  [35;1m [0m
+  [31m-        $register = DB::transaction(function() use ($request, $label_evidence) {[39m[0m
+  [32m+        $register = DB::transaction(function () use ($request, $label_evidence) {[39m[0m
+  [90;3m             [0m[39;1m$register [0m[35;1m= [0m[39;1mauth[0m[35;1m()->[0m[39;1muser[0m[35;1m()->[0m[39;1mcurrentTeam[0m[35;1m->[0m[39;1mregisters[0m[35;1m()->[0m[39;1mcreate[0m[35;1m([[0m
+  [35;1m                 [0m[37m'user_id' [0m[35;1m=> [0m[39;1mauth[0m[35;1m()->[0m[39;1mid[0m[35;1m(),[0m
+  [35;1m                 [0m[37m'title' [0m[35;1m=> [0m[39;1m$request[0m[35;1m->[0m[39;1mtitle[0m[35;1m,[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/TeamController.php [90m                                                                                                                                                                                                                                                                                                                   braces, function_declaration, curly_braces_position, no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m6[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m6[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m use Illuminate\Support\Facades\Gate;[0m
+  [35;1m use Inertia\Inertia;[0m
+  [35;1m use Laravel\Jetstream\Jetstream;[0m
+  [31m-use Laravel\Jetstream\RedirectsActions;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mTeamController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m31[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m30[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         [0m[39;1mGate[0m[35;1m::[0m[39;1mauthorize[0m[35;1m([0m[37m'view'[0m[35;1m, [0m[39;1m$team[0m[35;1m);[0m
+  [35;1m [0m
+  [35;1m         return [0m[39;1mJetstream[0m[35;1m::[0m[39;1minertia[0m[35;1m()->[0m[39;1mrender[0m[35;1m([0m[39;1m$request[0m[35;1m, [0m[37m'Teams/Show'[0m[35;1m, [[0m
+  [31m-            'team' => $team->load(['owner', 'users', 'teamInvitations', 'defaultLabelClass', 'labelClasses' => function($query) {[39m[0m
+  [32m+            'team' => $team->load(['owner', 'users', 'teamInvitations', 'defaultLabelClass', 'labelClasses' => function ($query) {[39m[0m
+  [90;3m                 [0m[39;1m$query[0m[35;1m->[0m[39;1morderBy[0m[35;1m([0m[37m'created_at'[0m[35;1m, [0m[37m'asc'[0m[35;1m);[0m
+  [35;1m             }]),[0m
+  [35;1m             [0m[37m'availableRoles' [0m[35;1m=> [0m[39;1marray_values[0m[35;1m([0m[39;1mJetstream[0m[35;1m::[0m[39;1m$roles[0m[35;1m),[0m
+  
+  [32;1m✓[39;22m app/Http/Middleware/HandleInertiaRequests.php [90m                                                                                                                                                                                                                                                                                                                                                  Laravel/laravel_phpdoc_separation[39m  
+  [35;1m@@ -[0m[39;1m11[0m[35;1m,[0m[39;1m6 [0m[35;1m+[0m[39;1m11[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m      * [0m[39;1mThe root template that[0m[37m's loaded on the first page visit.[0m
+  [37m      *[0m
+  [37m      * @see https://inertiajs.com/server-side-setup#root-template[0m
+  [37m//+[32m+     *[39m[0m
+  [37m      * @var string[0m
+  [37m      */[0m
+  [37m     protected $rootView = '[0m[39;1mapp[0m[37m';[0m
+  [37m@@ -19,6 +20,7 @@[0m
+  [37m      * Determines the current asset version.[0m
+  [37m      *[0m
+  [37m      * @see https://inertiajs.com/asset-versioning[0m
+  [37m//+[32m+     *[39m[0m
+  [37m      * @param  \Illuminate\Http\Request  $request[0m
+  [37m      * @return string|null[0m
+  [37m      */[0m
+  [37m@@ -31,6 +33,7 @@[0m
+  [37m      * Defines the props that are shared by default.[0m
+  [37m      *[0m
+  [37m      * @see https://inertiajs.com/shared-data[0m
+  [37m//+[32m+     *[39m[0m
+  [37m      * @param  \Illuminate\Http\Request  $request[0m
+  [37m      * @return array[0m
+  [37m      */[0m
+  
+  [32;1m✓[39;22m app/Http/Resources/AnnotationCampaignResource.php [90m                                                                                                                                                                                                                                                                                                                                               Laravel/laravel_phpdoc_alignment[39m  
+  [35;1m@@ -[0m[39;1m9[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m9[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     [0m[90;3m/**[0m
+  [90;3m      * Transform the resource into an array.[0m
+  [90;3m      *[0m
+  [31m-     * @param \Illuminate\Http\Request $request[39m[0m
+  [32m+     * @param  \Illuminate\Http\Request  $request[39m[0m
+  [90;3m      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable[0m
+  [90;3m      */[0m
+  [90;3m     [0m[35;1mpublic function [0m[39;1mtoArray[0m[35;1m([0m[39;1m$request[0m[35;1m)[0m
+  
+  [32;1m✓[39;22m app/Http/Resources/DatasetResource.php [90m                                                                                                                                                                                                                                                                                                                                                          Laravel/laravel_phpdoc_alignment[39m  
+  [35;1m@@ -[0m[39;1m9[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m9[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     [0m[90;3m/**[0m
+  [90;3m      * Transform the resource into an array.[0m
+  [90;3m      *[0m
+  [31m-     * @param \Illuminate\Http\Request $request[39m[0m
+  [32m+     * @param  \Illuminate\Http\Request  $request[39m[0m
+  [90;3m      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable[0m
+  [90;3m      */[0m
+  [90;3m     [0m[35;1mpublic function [0m[39;1mtoArray[0m[35;1m([0m[39;1m$request[0m[35;1m)[0m
+  
+  [32;1m✓[39;22m app/Http/Resources/ExperimentResource.php [90m                                                                                                                                                                                                                                                                                                                                                                           concat_space[39m  
+  [35;1m@@ -[0m[39;1m24[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m24[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m             [0m[37m'status' [0m[35;1m=> [0m[39;1m$this[0m[35;1m->[0m[39;1mstatus[0m[35;1m->[0m[39;1mname[0m[35;1m,[0m
+  [35;1m             [0m[37m'options' [0m[35;1m=> [0m[39;1m$this[0m[35;1m->[0m[39;1moptions[0m[35;1m,[0m
+  [35;1m             [0m[37m'statistics' [0m[35;1m=> [0m[39;1m$this[0m[35;1m->[0m[39;1mstatistics[0m[35;1m,[0m
+  [31m-            'learning_curve_simple' => Http::get(config('services.api.url') . '/experiments/' . $this->id . '/learning/simple')->json(),[39m[0m
+  [32m+            'learning_curve_simple' => Http::get(config('services.api.url').'/experiments/'.$this->id.'/learning/simple')->json(),[39m[0m
+  [90;3m         [0m[35;1m];[0m
+  [35;1m     }[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m app/Http/Resources/GridCellResource.php [90m                                                                                                                                                                                                                                                                                                                                                         Laravel/laravel_phpdoc_alignment[39m  
+  [35;1m@@ -[0m[39;1m9[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m9[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     [0m[90;3m/**[0m
+  [90;3m      * Transform the resource into an array.[0m
+  [90;3m      *[0m
+  [31m-     * @param \Illuminate\Http\Request $request[39m[0m
+  [32m+     * @param  \Illuminate\Http\Request  $request[39m[0m
+  [90;3m      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable[0m
+  [90;3m      */[0m
+  [90;3m     [0m[35;1mpublic function [0m[39;1mtoArray[0m[35;1m([0m[39;1m$request[0m[35;1m)[0m
+  
+  [32;1m✓[39;22m app/Http/Resources/RegisterResource.php [90m                                                                                                                                                                                                                                                                                                                                                         Laravel/laravel_phpdoc_alignment[39m  
+  [35;1m@@ -[0m[39;1m9[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m9[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     [0m[90;3m/**[0m
+  [90;3m      * Transform the resource into an array.[0m
+  [90;3m      *[0m
+  [31m-     * @param \Illuminate\Http\Request $request[39m[0m
+  [32m+     * @param  \Illuminate\Http\Request  $request[39m[0m
+  [90;3m      * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable[0m
+  [90;3m      */[0m
+  [90;3m     [0m[35;1mpublic function [0m[39;1mtoArray[0m[35;1m([0m[39;1m$request[0m[35;1m)[0m
+  
+  [32;1m✓[39;22m app/Http/Traits/ConsolidateDatasetsTrait.php [90m                                                                                                                                                                                                                                        class_definition, braces, function_declaration, curly_braces_position, concat_space, single_quote, no_unused_imports, binary_operator_spaces[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m10 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m9 [0m[35;1m@@[0m
+  [35;1m namespace App\Http\Traits;[0m
+  [35;1m [0m
+  [35;1m use Illuminate\Support\Facades\Http;[0m
+  [31m-use Symfony\Component\Process\Exception\ProcessFailedException;[39m[0m
+  [31m-use Symfony\Component\Process\Process;[39m[0m
+  [90;3m [0m
+  [31m-trait ConsolidateDatasetsTrait {[39m[0m
+  [32m+trait ConsolidateDatasetsTrait[39m[0m
+  [32m+{[39m[0m
+  [90;3m     [0m[35;1mpublic function [0m[39;1mconsolidate[0m[35;1m([0m[39;1m$team[0m[35;1m, [0m[39;1m$datasets[0m[35;1m, [0m[39;1m$gridCells[0m[35;1m)[0m
+  [35;1m     {[0m
+  [35;1m         [0m[39;1m$labelClasses [0m[35;1m= [0m[39;1m$team[0m[35;1m->[0m[39;1mlabelClasses[0m[35;1m;[0m
+  [35;1m@@ -[0m[39;1m14[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m13[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m         [0m[90;3m// Get Annotation Campaign Label Evidence for the selected Datasets.[0m
+  [90;3m         // Get the Annotation Campaigns associated with the selected Datasets.[0m
+  [31m-        $registers = $team->registers->filter(function($register) use($datasets) {[39m[0m
+  [31m-            if ($register->datasets->count() === $datasets->count() && $register->datasets->pluck('id') == $datasets->pluck('id')  && $register->labelEvidence->isNotEmpty()) {[39m[0m
+  [32m+        $registers = $team->registers->filter(function ($register) use ($datasets) {[39m[0m
+  [32m+            if ($register->datasets->count() === $datasets->count() && $register->datasets->pluck('id') == $datasets->pluck('id') && $register->labelEvidence->isNotEmpty()) {[39m[0m
+  [90;3m                 [0m[35;1mreturn [0m[39;1m$register[0m[35;1m;[0m
+  [35;1m             }[0m
+  [35;1m [0m
+  [35;1m@@ -[0m[39;1m23[0m[35;1m,[0m[39;1m13 [0m[35;1m+[0m[39;1m22[0m[35;1m,[0m[39;1m13 [0m[35;1m@@[0m
+  [35;1m         });[0m
+  [35;1m [0m
+  [35;1m         [0m[90;3m// Get the Label Evidence for the associated Annotation Campaigns.[0m
+  [31m-        $registersEvidence = $registers->map(function($register) use($gridCells) {[39m[0m
+  [32m+        $registersEvidence = $registers->map(function ($register) use ($gridCells) {[39m[0m
+  [90;3m             [0m[35;1mreturn [0m[39;1m$register[0m[35;1m->[0m[39;1mlabelEvidence[0m[35;1m->[0m[39;1mwhereIn[0m[35;1m([0m[37m'grid_cell_id'[0m[35;1m, [0m[39;1m$gridCells[0m[35;1m->[0m[39;1mpluck[0m[35;1m([0m[37m'id'[0m[35;1m))->[0m[39;1mmap[0m[35;1m->[0m[39;1monly[0m[35;1m([[0m[37m'grid_cell_id'[0m[35;1m, [0m[37m'label_class_id'[0m[35;1m, [0m[37m'weight'[0m[35;1m])->[0m[39;1mvalues[0m[35;1m();[0m
+  [35;1m         });[0m
+  [35;1m [0m
+  [35;1m         [0m[90;3m// Get Annotation Campaign Label Evidence for the selected Datasets.[0m
+  [90;3m         // Get the Annotation Campaigns associated with the selected Datasets.[0m
+  [31m-        $annotationCampaigns = $team->annotationCampaigns->filter(function($annotationCampaign) use($datasets) {[39m[0m
+  [32m+        $annotationCampaigns = $team->annotationCampaigns->filter(function ($annotationCampaign) use ($datasets) {[39m[0m
+  [90;3m             [0m[35;1mif ([0m[39;1m$annotationCampaign[0m[35;1m->[0m[39;1mdatasets[0m[35;1m->[0m[39;1mcount[0m[35;1m() === [0m[39;1m$datasets[0m[35;1m->[0m[39;1mcount[0m[35;1m() && [0m[39;1m$annotationCampaign[0m[35;1m->[0m[39;1mdatasets[0m[35;1m->[0m[39;1mpluck[0m[35;1m([0m[37m'id'[0m[35;1m) == [0m[39;1m$datasets[0m[35;1m->[0m[39;1mpluck[0m[35;1m([0m[37m'id'[0m[35;1m) && [0m[39;1m$annotationCampaign[0m[35;1m->[0m[39;1mlabelEvidence[0m[35;1m->[0m[39;1misNotEmpty[0m[35;1m()) {[0m
+  [35;1m                 return [0m[39;1m$annotationCampaign[0m[35;1m;[0m
+  [35;1m             }[0m
+  [35;1m@@ -[0m[39;1m38[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m37[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         });[0m
+  [35;1m [0m
+  [35;1m         [0m[90;3m// Get the Label Evidence for the associated Annotation Campaigns.[0m
+  [31m-        $annotationCampaignsEvidence = collect($annotationCampaigns)->map(function($annotationCampaign) use($gridCells) {[39m[0m
+  [32m+        $annotationCampaignsEvidence = collect($annotationCampaigns)->map(function ($annotationCampaign) use ($gridCells) {[39m[0m
+  [90;3m             [0m[35;1mreturn [0m[39;1m$annotationCampaign[0m[35;1m->[0m[39;1mlabelEvidence[0m[35;1m->[0m[39;1mwhereIn[0m[35;1m([0m[37m'grid_cell_id'[0m[35;1m, [0m[39;1m$gridCells[0m[35;1m->[0m[39;1mpluck[0m[35;1m([0m[37m'id'[0m[35;1m))->[0m[39;1mmap[0m[35;1m->[0m[39;1monly[0m[35;1m([[0m[37m'grid_cell_id'[0m[35;1m, [0m[37m'label_class_id'[0m[35;1m, [0m[37m'weight'[0m[35;1m])->[0m[39;1mvalues[0m[35;1m();[0m
+  [35;1m         });[0m
+  [35;1m [0m
+  [35;1m@@ -[0m[39;1m54[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m53[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         ];[0m
+  [35;1m [0m
+  [35;1m         [0m[90;3m// Send API call to consolidate the datasets.[0m
+  [31m-        $response = Http::post(config("services.api.url") . "/consolidate", $input);[39m[0m
+  [32m+        $response = Http::post(config('services.api.url').'/consolidate', $input);[39m[0m
+  [90;3m [0m
+  [90;3m         [0m[35;1mreturn [0m[39;1m$response[0m[35;1m->[0m[39;1mjson[0m[35;1m();[0m
+  [35;1m     }[0m
+  
+  [32;1m✓[39;22m app/Http/Traits/CreateSubsetTrait.php [90m                                                                                                                                                                                                                                                                                                 elseif, class_definition, braces, curly_braces_position, not_operator_with_successor_space[39m  
+  [35;1m@@ -[0m[39;1m7[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m7[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m use App\Models\Region;[0m
+  [35;1m use Illuminate\Http\Request;[0m
+  [35;1m [0m
+  [31m-trait CreateSubsetTrait {[39m[0m
+  [32m+trait CreateSubsetTrait[39m[0m
+  [32m+{[39m[0m
+  [90;3m     [0m[35;1mpublic function [0m[39;1mcreateSubset[0m[35;1m([0m[39;1mSubsetTypeEnum $type[0m[35;1m, [0m[39;1mDataset $dataset[0m[35;1m, [0m[39;1mRequest $request[0m[35;1m)[0m
+  [35;1m     {[0m
+  [35;1m         if ([0m[39;1m$type [0m[35;1m=== [0m[39;1mSubsetTypeEnum[0m[35;1m::[0m[39;1mRandomSample[0m[35;1m) {[0m
+  [35;1m@@ -[0m[39;1m17[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m18[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m             [0m[90;3m// Check if provided Sample Size is a number or percentage.[0m
+  [90;3m             // If it is a percentage convert the percentage into a number.[0m
+  [90;3m             [0m[39;1m$number [0m[35;1m= [0m[39;1m$request[0m[35;1m->[0m[39;1msample_size[0m[35;1m;[0m
+  [31m-            if (!is_numeric($number)) {[39m[0m
+  [32m+            if (! is_numeric($number)) {[39m[0m
+  [90;3m                 [0m[39;1m$number [0m[35;1m= [0m[39;1mround[0m[35;1m([0m[39;1m$gridCellsCount [0m[35;1m* ([0m[39;1mround[0m[35;1m([0m[39;1mstr_replace[0m[35;1m([0m[37m'%'[0m[35;1m, [0m[37m''[0m[35;1m, [0m[39;1m$number[0m[35;1m) / [0m[39;1m1[0m[35;1m) / [0m[39;1m100[0m[35;1m));[0m
+  [35;1m             }[0m
+  [35;1m [0m
+  [35;1m@@ -[0m[39;1m28[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m29[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m             [0m[90;3m// Get random Grid Cell IDs.[0m
+  [90;3m             [0m[35;1mreturn [0m[39;1m$dataset[0m[35;1m->[0m[39;1mgridCells[0m[35;1m()->[0m[39;1minRandomOrder[0m[35;1m()->[0m[39;1mtake[0m[35;1m([0m[39;1m$number[0m[35;1m)->[0m[39;1mget[0m[35;1m();[0m
+  [31m-        } else if ($type === SubsetTypeEnum::Regions) {[39m[0m
+  [32m+        } elseif ($type === SubsetTypeEnum::Regions) {[39m[0m
+  [90;3m             // Get the selected regions.[0m
+  [90;3m             [0m[39;1m$regions [0m[35;1m= [0m[39;1mRegion[0m[35;1m::[0m[39;1mfindOrFail[0m[35;1m([0m[39;1m$request[0m[35;1m->[0m[39;1mregions[0m[35;1m);[0m
+  [35;1m [0m
+  [35;1m@@ -[0m[39;1m48[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m49[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m             [0m[90;3m// Turn the Grid Cell array into a single array with no duplicates.[0m
+  [90;3m             [0m[35;1mreturn [0m[39;1m$gridCells[0m[35;1m[[0m[39;1m0[0m[35;1m];[0m
+  [31m-        } else if ($type === SubsetTypeEnum::File) {[39m[0m
+  [32m+        } elseif ($type === SubsetTypeEnum::File) {[39m[0m
+  [90;3m             // Get the Grid Cell names specified in the document.[0m
+  [90;3m             [0m[39;1m$gridCellsNames [0m[35;1m= [];[0m
+  [35;1m             if (([0m[39;1m$handle [0m[35;1m= [0m[39;1mfopen[0m[35;1m([0m[39;1m$request[0m[35;1m->[0m[39;1mfile[0m[35;1m->[0m[39;1mgetRealPath[0m[35;1m(), [0m[37m'r'[0m[35;1m)) !== [0m[39;1mfalse[0m[35;1m) {[0m
+  
+  [32;1m✓[39;22m app/Models/Dataset.php [90m                                                                                                                                                                                                                                                                                                                          braces, function_declaration, curly_braces_position, trailing_comma_in_multiline[39m  
+  [35;1m@@ -[0m[39;1m12[0m[35;1m,[0m[39;1m13 [0m[35;1m+[0m[39;1m12[0m[35;1m,[0m[39;1m13 [0m[35;1m@@[0m
+  [35;1m     use [0m[39;1mHasFactory[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m     protected [0m[39;1m$fillable [0m[35;1m= [[0m
+  [31m-        'user_id', 'dataset_id', 'title', 'description'[39m[0m
+  [32m+        'user_id', 'dataset_id', 'title', 'description',[39m[0m
+  [90;3m     [0m[35;1m];[0m
+  [35;1m [0m
+  [35;1m     protected function [0m[39;1myear[0m[35;1m(): [0m[39;1mAttribute[0m
+  [39;1m     [0m[35;1m{[0m
+  [35;1m         return [0m[39;1mAttribute[0m[35;1m::[0m[39;1mmake[0m[35;1m([0m
+  [31m-            get: function($year) {[39m[0m
+  [32m+            get: function ($year) {[39m[0m
+  [90;3m                 [0m[35;1mif ([0m[39;1m$this[0m[35;1m->[0m[39;1mdataset [0m[35;1m&& [0m[39;1m$year [0m[35;1m=== [0m[39;1mnull[0m[35;1m) {[0m
+  [35;1m                     return [0m[39;1m$this[0m[35;1m->[0m[39;1mdataset[0m[35;1m->[0m[39;1myear[0m[35;1m;[0m
+  [35;1m                 }[0m
+  [35;1m@@ -[0m[39;1m31[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m31[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     protected function [0m[39;1mwidth[0m[35;1m(): [0m[39;1mAttribute[0m
+  [39;1m     [0m[35;1m{[0m
+  [35;1m         return [0m[39;1mAttribute[0m[35;1m::[0m[39;1mmake[0m[35;1m([0m
+  [31m-            get: function($width) {[39m[0m
+  [32m+            get: function ($width) {[39m[0m
+  [90;3m                 [0m[35;1mif ([0m[39;1m$this[0m[35;1m->[0m[39;1mdataset [0m[35;1m&& [0m[39;1m$width [0m[35;1m=== [0m[39;1mnull[0m[35;1m) {[0m
+  [35;1m                     return [0m[39;1m$this[0m[35;1m->[0m[39;1mdataset[0m[35;1m->[0m[39;1mwidth[0m[35;1m;[0m
+  [35;1m                 }[0m
+  [35;1m@@ -[0m[39;1m44[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m44[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     protected function [0m[39;1mheight[0m[35;1m(): [0m[39;1mAttribute[0m
+  [39;1m     [0m[35;1m{[0m
+  [35;1m         return [0m[39;1mAttribute[0m[35;1m::[0m[39;1mmake[0m[35;1m([0m
+  [31m-            get: function($height) {[39m[0m
+  [32m+            get: function ($height) {[39m[0m
+  [90;3m                 [0m[35;1mif ([0m[39;1m$this[0m[35;1m->[0m[39;1mdataset [0m[35;1m&& [0m[39;1m$height [0m[35;1m=== [0m[39;1mnull[0m[35;1m) {[0m
+  [35;1m                     return [0m[39;1m$this[0m[35;1m->[0m[39;1mdataset[0m[35;1m->[0m[39;1mheight[0m[35;1m;[0m
+  [35;1m                 }[0m
+  [35;1m@@ -[0m[39;1m57[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m57[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     public function [0m[39;1mimageType[0m[35;1m(): [0m[39;1mAttribute[0m
+  [39;1m     [0m[35;1m{[0m
+  [35;1m         return [0m[39;1mAttribute[0m[35;1m::[0m[39;1mmake[0m[35;1m([0m
+  [31m-            get: function($image_type) {[39m[0m
+  [32m+            get: function ($image_type) {[39m[0m
+  [90;3m                 [0m[35;1mif ([0m[39;1m$this[0m[35;1m->[0m[39;1mdataset [0m[35;1m&& [0m[39;1m$image_type [0m[35;1m=== [0m[39;1mnull[0m[35;1m) {[0m
+  [35;1m                     return [0m[39;1m$this[0m[35;1m->[0m[39;1mdataset[0m[35;1m->[0m[39;1mimage_type[0m[35;1m;[0m
+  [35;1m                 }[0m
+  [35;1m@@ -[0m[39;1m87[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m87[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m         return [0m[39;1m$this[0m[35;1m->[0m[39;1mbelongsToMany[0m[35;1m([0m[39;1mAnnotationCampaign[0m[35;1m::class);[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  [31m-    public function path() {[39m[0m
+  [32m+    public function path()[39m[0m
+  [32m+    {[39m[0m
+  [90;3m         [0m[35;1mif ([0m[39;1m$this[0m[35;1m->[0m[39;1mdataset[0m[35;1m) {[0m
+  [35;1m             return [0m[39;1m$this[0m[35;1m->[0m[39;1mdataset[0m[35;1m->[0m[39;1mpath[0m[35;1m();[0m
+  [35;1m         }[0m
+  [35;1m@@ -[0m[39;1m95[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m96[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m         return [0m[37m"[0m[35;1m{[0m[39;1m$this[0m[35;1m->[0m[39;1murl[0m[35;1m}[0m[37m&VERSION=1.3.0&REQUEST=GetMap&LAYERS=[0m[35;1m{[0m[39;1m$this[0m[35;1m->[0m[39;1mlayer[0m[35;1m}[0m[37m&CRS=[0m[35;1m{[0m[39;1m$this[0m[35;1m->[0m[39;1mcrs[0m[35;1m}[0m[37m&WIDTH=[0m[35;1m{[0m[39;1m$this[0m[35;1m->[0m[39;1mwidth[0m[35;1m}[0m[37m&HEIGHT=[0m[35;1m{[0m[39;1m$this[0m[35;1m->[0m[39;1mheight[0m[35;1m}[0m[37m&FORMAT=image/png&styles"[0m[35;1m;[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  [31m-    public function delete() {[39m[0m
+  [32m+    public function delete()[39m[0m
+  [32m+    {[39m[0m
+  [90;3m         [0m[39;1m$this[0m[35;1m->[0m[39;1mregisters[0m[35;1m()->[0m[39;1mdelete[0m[35;1m();[0m
+  [35;1m         [0m[39;1m$this[0m[35;1m->[0m[39;1mannotationCampaigns[0m[35;1m()->[0m[39;1mdelete[0m[35;1m();[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Models/Experiment.php [90m                                                                                                                                                                                                                                                                                        braces, function_declaration, array_indentation, curly_braces_position, concat_space, single_line_comment_style[39m  
+  [35;1m@@ -[0m[39;1m25[0m[35;1m,[0m[39;1m14 [0m[35;1m+[0m[39;1m25[0m[35;1m,[0m[39;1m14 [0m[35;1m@@[0m
+  [35;1m     {[0m
+  [35;1m         [0m[39;1mparent[0m[35;1m::[0m[39;1mboot[0m[35;1m();[0m
+  [35;1m [0m
+  [31m-        # Create the Experiment file on the Experiment API when an Experiment is created.[39m[0m
+  [31m-        static::created(function($experiment) {[39m[0m
+  [31m-            Http::post(config('services.api.url') . '/experiments', $experiment->createExperimentData());[39m[0m
+  [32m+        // Create the Experiment file on the Experiment API when an Experiment is created.[39m[0m
+  [32m+        static::created(function ($experiment) {[39m[0m
+  [32m+            Http::post(config('services.api.url').'/experiments', $experiment->createExperimentData());[39m[0m
+  [90;3m         [0m[35;1m});[0m
+  [35;1m [0m
+  [31m-        # Delete the files saved on the Experiment API when an Experiment is deleted.[39m[0m
+  [31m-        static::deleted(function($experiment) {[39m[0m
+  [31m-            Http::delete(config('services.api.url') . '/experiments/' . $experiment->id);[39m[0m
+  [32m+        // Delete the files saved on the Experiment API when an Experiment is deleted.[39m[0m
+  [32m+        static::deleted(function ($experiment) {[39m[0m
+  [32m+            Http::delete(config('services.api.url').'/experiments/'.$experiment->id);[39m[0m
+  [90;3m         [0m[35;1m});[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  [35;1m@@ -[0m[39;1m53[0m[35;1m,[0m[39;1m9 [0m[35;1m+[0m[39;1m53[0m[35;1m,[0m[39;1m9 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m     public function [0m[39;1mstart[0m[35;1m()[0m
+  [35;1m     {[0m
+  [31m-        if (Http::post(config('services.api.url') . '/experiments/' . $this->id . '/start')->successful()) {[39m[0m
+  [32m+        if (Http::post(config('services.api.url').'/experiments/'.$this->id.'/start')->successful()) {[39m[0m
+  [90;3m             [0m[39;1m$this[0m[35;1m->[0m[39;1mupdate[0m[35;1m([[0m
+  [31m-               'status' => ExperimentStatusEnum::Training,[39m[0m
+  [32m+                'status' => ExperimentStatusEnum::Training,[39m[0m
+  [90;3m             [0m[35;1m]);[0m
+  [35;1m         }[0m
+  [35;1m     }[0m
+  [35;1m@@ -[0m[39;1m62[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m62[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m     public function [0m[39;1mstop[0m[35;1m()[0m
+  [35;1m     {[0m
+  [31m-        if (Http::post(config('services.api.url') . '/experiments/' . $this->id . '/stop')->successful()) {[39m[0m
+  [32m+        if (Http::post(config('services.api.url').'/experiments/'.$this->id.'/stop')->successful()) {[39m[0m
+  [90;3m             [0m[39;1m$this[0m[35;1m->[0m[39;1mupdate[0m[35;1m([[0m
+  [35;1m                 [0m[37m'status' [0m[35;1m=> [0m[39;1mExperimentStatusEnum[0m[35;1m::[0m[39;1mStopped[0m[35;1m,[0m
+  [35;1m             ]);[0m
+  [35;1m@@ -[0m[39;1m76[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m76[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m                 [0m[37m'experiment' [0m[35;1m=> [[0m
+  [35;1m                     [0m[37m'id' [0m[35;1m=> [0m[39;1m$this[0m[35;1m->[0m[39;1mid[0m[35;1m,[0m
+  [35;1m                 ],[0m
+  [31m-                'label_classes' => $this->team->labelClasses->map(function($labelClass) {[39m[0m
+  [32m+                'label_classes' => $this->team->labelClasses->map(function ($labelClass) {[39m[0m
+  [90;3m                     [0m[35;1mreturn [0m[39;1m$labelClass[0m[35;1m->[0m[39;1mname[0m[35;1m;[0m
+  [35;1m                 }),[0m
+  [35;1m             ],[0m
+  [35;1m@@ -[0m[39;1m91[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m91[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     private function [0m[39;1mexperimentDataForTraining[0m[35;1m([0m[39;1m$data[0m[35;1m): array[0m
+  [35;1m     {[0m
+  [35;1m         return [[0m
+  [31m-            'datasets' => $data->datasets->map(function($dataset) {[39m[0m
+  [32m+            'datasets' => $data->datasets->map(function ($dataset) {[39m[0m
+  [90;3m                 [0m[35;1mreturn [[0m
+  [35;1m                     [0m[37m'grid_cell_size' [0m[35;1m=> [0m[39;1m$dataset[0m[35;1m->[0m[39;1mgridCells[0m[35;1m()->[0m[39;1mfirst[0m[35;1m()->[0m[39;1mtype[0m[35;1m->[0m[39;1mvalue[0m[35;1m,[0m
+  [35;1m                     [0m[37m'image_type' [0m[35;1m=> [0m[39;1m$dataset[0m[35;1m->[0m[39;1mimage_type[0m[35;1m->[0m[39;1mvalue[0m[35;1m,[0m
+  [35;1m@@ -[0m[39;1m98[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m98[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m                     [0m[37m'year' [0m[35;1m=> [0m[39;1m$dataset[0m[35;1m->[0m[39;1myear[0m[35;1m,[0m
+  [35;1m                 ];[0m
+  [35;1m             }),[0m
+  [31m-            'labels' => $data->labels->map(function($label) {[39m[0m
+  [32m+            'labels' => $data->labels->map(function ($label) {[39m[0m
+  [90;3m                 [0m[35;1mreturn [[0m
+  [35;1m                     [0m[37m'grid_cell' [0m[35;1m=> [0m[39;1m$label[0m[35;1m->[0m[39;1mgridCell[0m[35;1m->[0m[39;1mname[0m[35;1m,[0m
+  [35;1m                     [0m[37m'label' [0m[35;1m=> [0m[39;1m$label[0m[35;1m->[0m[39;1mlabelClass[0m[35;1m->[0m[39;1mname[0m[35;1m,[0m
+  
+  [32;1m✓[39;22m app/Models/ExperimentData.php [90m                                                                                                                                                                                                                                                                                                                                                                                  array_indentation[39m  
+  [35;1m@@ -[0m[39;1m10[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m10[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     use [0m[39;1mHasFactory[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m     protected [0m[39;1m$fillable [0m[35;1m= [[0m
+  [31m-      'user_id', 'name', 'description',[39m[0m
+  [32m+        'user_id', 'name', 'description',[39m[0m
+  [90;3m     [0m[35;1m];[0m
+  [35;1m [0m
+  [35;1m     public function [0m[39;1mteam[0m[35;1m()[0m
+  
+  [32;1m✓[39;22m app/Models/ExperimentDataLabel.php [90m                                                                                                                                                                                                                                                                                                                                                                                        braces[39m  
+  [35;1m@@ -[0m[39;1m15[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m15[0m[35;1m,[0m[39;1m13 [0m[35;1m@@[0m
+  [35;1m         [0m[37m'grid_cell_id'[0m[35;1m, [0m[37m'label_class_id'[0m[35;1m,[0m
+  [35;1m     ];[0m
+  [35;1m [0m
+  [31m-    public function gridCell() {[39m[0m
+  [32m+    public function gridCell()[39m[0m
+  [32m+    {[39m[0m
+  [90;3m         [0m[35;1mreturn [0m[39;1m$this[0m[35;1m->[0m[39;1mbelongsTo[0m[35;1m([0m[39;1mGridCell[0m[35;1m::class);[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  [31m-    public function labelClass() {[39m[0m
+  [32m+    public function labelClass()[39m[0m
+  [32m+    {[39m[0m
+  [90;3m         [0m[35;1mreturn [0m[39;1m$this[0m[35;1m->[0m[39;1mbelongsTo[0m[35;1m([0m[39;1mLabelClass[0m[35;1m::class);[0m
+  [35;1m     }[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m app/Models/GridCell.php [90m                                                                                                                                                                                                                                                                                                                                                                                             single_quote[39m  
+  [35;1m@@ -[0m[39;1m24[0m[35;1m,[0m[39;1m6 [0m[35;1m+[0m[39;1m24[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m     public function [0m[39;1mnewQuery[0m[35;1m()[0m
+  [35;1m     {[0m
+  [35;1m         return [0m[39;1mparent[0m[35;1m::[0m[39;1mnewQuery[0m[35;1m()[0m
+  [31m-            ->addSelect(["*", DB::raw("st_xmin(geometry) AS x_min, st_xmax(geometry) as x_max, st_ymin(geometry) as y_min, st_ymax(geometry) as y_max")]);[39m[0m
+  [32m+            ->addSelect(['*', DB::raw('st_xmin(geometry) AS x_min, st_xmax(geometry) as x_max, st_ymin(geometry) as y_min, st_ymax(geometry) as y_max')]);[39m[0m
+  [90;3m     [0m[35;1m}[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m app/Models/LabelEvidence.php [90m                                                                                                                                                                                                                                                                                                                                                                                   array_indentation[39m  
+  [35;1m@@ -[0m[39;1m10[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m10[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     use [0m[39;1mHasFactory[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m     protected [0m[39;1m$fillable [0m[35;1m= [[0m
+  [31m-      'user_id', 'grid_cell_id', 'label_class_id', 'weight',[39m[0m
+  [32m+        'user_id', 'grid_cell_id', 'label_class_id', 'weight',[39m[0m
+  [90;3m     [0m[35;1m];[0m
+  [35;1m [0m
+  [35;1m     public function [0m[39;1msource[0m[35;1m()[0m
+  
+  [32;1m✓[39;22m app/Models/PredictionLabel.php [90m                                                                                                                                                                                                                                                                                                                                                                                            braces[39m  
+  [35;1m@@ -[0m[39;1m13[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m13[0m[35;1m,[0m[39;1m13 [0m[35;1m@@[0m
+  [35;1m         [0m[37m'grid_cell_id'[0m[35;1m, [0m[37m'label_class_id'[0m[35;1m,[0m
+  [35;1m     ];[0m
+  [35;1m [0m
+  [31m-    public function gridCell() {[39m[0m
+  [32m+    public function gridCell()[39m[0m
+  [32m+    {[39m[0m
+  [90;3m         [0m[35;1mreturn [0m[39;1m$this[0m[35;1m->[0m[39;1mbelongsTo[0m[35;1m([0m[39;1mGridCell[0m[35;1m::class);[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  [31m-    public function labelClass() {[39m[0m
+  [32m+    public function labelClass()[39m[0m
+  [32m+    {[39m[0m
+  [90;3m         [0m[35;1mreturn [0m[39;1m$this[0m[35;1m->[0m[39;1mbelongsTo[0m[35;1m([0m[39;1mLabelClass[0m[35;1m::class);[0m
+  [35;1m     }[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m app/Models/User.php [90m                                                                                                                                                                                                                                                                                                                                                                                            no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Models;[0m
+  [35;1m [0m
+  [31m-use Illuminate\Contracts\Auth\MustVerifyEmail;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Database\Eloquent\Factories\HasFactory;[0m
+  [35;1m use Illuminate\Foundation\Auth\User as [0m[39;1mAuthenticatable[0m[35;1m;[0m
+  [35;1m use Illuminate\Notifications\Notifiable;[0m
+  
+  [32;1m✓[39;22m app/Providers/AppServiceProvider.php [90m                                                                                                                                                                                                                                                                                                                                                                                      braces[39m  
+  [35;1m@@ -[0m[39;1m23[0m[35;1m,[0m[39;1m6 [0m[35;1m+[0m[39;1m23[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m      */[0m
+  [35;1m     public function [0m[39;1mboot[0m[35;1m()[0m
+  [35;1m     {[0m
+  [31m-        // [39m[0m
+  [32m+        //[39m[0m
+  [90;3m     [0m[35;1m}[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m app/Rules/DatasetHasLabelEvidence.php [90m                                                                                                                                                                                                                                                           braces, function_declaration, curly_braces_position, unary_operator_spaces, no_unused_imports, not_operator_with_successor_space[39m  
+  [35;1m@@ -[0m[39;1m4[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m4[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m use App\Models\Dataset;[0m
+  [35;1m use Illuminate\Contracts\Validation\Rule;[0m
+  [31m-use Illuminate\Database\Eloquent\Builder;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mDatasetHasLabelEvidence [0m[35;1mimplements [0m[39;1mRule[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m30[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m29[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         [0m[39;1m$datasets [0m[35;1m= [0m[39;1mDataset[0m[35;1m::[0m[39;1mfind[0m[35;1m([0m[39;1m$value[0m[35;1m)->[0m[39;1mpluck[0m[35;1m([0m[37m'id'[0m[35;1m)->[0m[39;1mtoArray[0m[35;1m();[0m
+  [35;1m [0m
+  [35;1m         [0m[90;3m// Check if there are any Annotation Campaigns connected to the selected datasets.[0m
+  [31m-        $annotationCampaigns = auth()->user()->currentTeam->annotationCampaigns->filter(function($annotationCampaign) use ($datasets) {[39m[0m
+  [32m+        $annotationCampaigns = auth()->user()->currentTeam->annotationCampaigns->filter(function ($annotationCampaign) use ($datasets) {[39m[0m
+  [90;3m             [0m[35;1mif ([0m[39;1m$annotationCampaign[0m[35;1m->[0m[39;1mdatasets[0m[35;1m->[0m[39;1mcount[0m[35;1m() === [0m[39;1mcount[0m[35;1m([0m[39;1m$datasets[0m[35;1m) && ! [0m[39;1marray_diff[0m[35;1m([0m[39;1m$annotationCampaign[0m[35;1m->[0m[39;1mdatasets[0m[35;1m()->[0m[39;1mpluck[0m[35;1m([0m[37m'id'[0m[35;1m)->[0m[39;1mtoArray[0m[35;1m(), [0m[39;1m$datasets[0m[35;1m)) {[0m
+  [35;1m                 return [0m[39;1m$annotationCampaign[0m[35;1m;[0m
+  [35;1m             }[0m
+  [35;1m@@ -[0m[39;1m44[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m43[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         }[0m
+  [35;1m [0m
+  [35;1m         [0m[90;3m// Check if there are any Registers connected to the selected datasets.[0m
+  [31m-        $registers = auth()->user()->currentTeam->registers->filter(function($register) use ($datasets) {[39m[0m
+  [32m+        $registers = auth()->user()->currentTeam->registers->filter(function ($register) use ($datasets) {[39m[0m
+  [90;3m             [0m[35;1mif ([0m[39;1m$register[0m[35;1m->[0m[39;1mdatasets[0m[35;1m->[0m[39;1mcount[0m[35;1m() === [0m[39;1mcount[0m[35;1m([0m[39;1m$datasets[0m[35;1m) && ! [0m[39;1marray_diff[0m[35;1m([0m[39;1m$register[0m[35;1m->[0m[39;1mdatasets[0m[35;1m()->[0m[39;1mpluck[0m[35;1m([0m[37m'id'[0m[35;1m)->[0m[39;1mtoArray[0m[35;1m(), [0m[39;1m$datasets[0m[35;1m)) {[0m
+  [35;1m                 return [0m[39;1m$register[0m[35;1m;[0m
+  [35;1m             }[0m
+  
+  [32;1m✓[39;22m app/Rules/DatasetsCompatible.php [90m                                                                                                                                                                                                                                                                                                                                                                               no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m4[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m4[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m use App\Models\Dataset;[0m
+  [35;1m use Illuminate\Contracts\Validation\Rule;[0m
+  [31m-use Illuminate\Validation\ValidationException;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mDatasetsCompatible [0m[35;1mimplements [0m[39;1mRule[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m database/migrations/2022_03_21_142652_create_label_classes_table.php [90m                                                                                                                                                                                                                                                                                                                               braces, curly_braces_position[39m  
+  [35;1m@@ -[0m[39;1m4[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m4[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m use Illuminate\Database\Schema\Blueprint;[0m
+  [35;1m use Illuminate\Support\Facades\Schema;[0m
+  [35;1m [0m
+  [31m-return new class extends Migration {[39m[0m
+  [32m+return new class extends Migration[39m[0m
+  [32m+{[39m[0m
+  [90;3m     /**[0m
+  [90;3m      * Run the migrations.[0m
+  [90;3m      *[0m
+  
+  [32;1m✓[39;22m database/seeders/DatabaseSeeder.php [90m                                                                                                                                                                                                                                                                                                                                                                    braces, array_indentation[39m  
+  [35;1m@@ -[0m[39;1m13[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m13[0m[35;1m,[0m[39;1m11 [0m[35;1m@@[0m
+  [35;1m      */[0m
+  [35;1m     public function [0m[39;1mrun[0m[35;1m()[0m
+  [35;1m     {[0m
+  [31m-       $this->call([[39m[0m
+  [31m-           UserSeeder::class,[39m[0m
+  [31m-           GridCellSeeder::class,[39m[0m
+  [31m-           RegionSeeder::class,[39m[0m
+  [31m-           DatasetSeeder::class,[39m[0m
+  [31m-       ]);[39m[0m
+  [32m+        $this->call([[39m[0m
+  [32m+            UserSeeder::class,[39m[0m
+  [32m+            GridCellSeeder::class,[39m[0m
+  [32m+            RegionSeeder::class,[39m[0m
+  [32m+            DatasetSeeder::class,[39m[0m
+  [32m+        ]);[39m[0m
+  [90;3m     [0m[35;1m}[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m database/seeders/DatasetSeeder.php [90m                                                                                                                                                                                                                                                                                                                             braces, curly_braces_position, single_quote, no_extra_blank_lines[39m  
+  [35;1m@@ -[0m[39;1m33[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m33[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         [0m[39;1m$this[0m[35;1m->[0m[39;1msetDefaultType[0m[35;1m();[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  [31m-    private function createDataset($gridCellType, $title, $description, $year, $url, $layer, $crs = "EPSG:28992")[39m[0m
+  [32m+    private function createDataset($gridCellType, $title, $description, $year, $url, $layer, $crs = 'EPSG:28992')[39m[0m
+  [90;3m     [0m[35;1m{[0m
+  [35;1m         [0m[39;1m$this[0m[35;1m->[0m[39;1mcommand[0m[35;1m->[0m[39;1minfo[0m[35;1m([0m[37m"Creating dataset [0m[35;1m{[0m[39;1m$title[0m[35;1m}[0m[37m in database."[0m[35;1m);[0m
+  [35;1m [0m
+  [35;1m@@ -[0m[39;1m50[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m50[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m         ]);[0m
+  [35;1m [0m
+  [35;1m         [0m[39;1m$this[0m[35;1m->[0m[39;1mcommand[0m[35;1m->[0m[39;1minfo[0m[35;1m([0m[37m"Saving linked grid cells of dataset [0m[35;1m{[0m[39;1m$title[0m[35;1m}[0m[37m to database."[0m[35;1m);[0m
+  [31m-[39m[0m
+  [90;3m [0m
+  [90;3m         [0m[39;1m$this[0m[35;1m->[0m[39;1mcommand[0m[35;1m->[0m[39;1mgetOutput[0m[35;1m()->[0m[39;1mprogressStart[0m[35;1m([0m[39;1mGridCell[0m[35;1m::[0m[39;1mwhere[0m[35;1m([0m[37m'type'[0m[35;1m, [0m[39;1m$gridCellType[0m[35;1m->[0m[39;1mvalue[0m[35;1m)->[0m[39;1mcount[0m[35;1m());[0m
+  [35;1m         [0m[39;1mGridCell[0m[35;1m::[0m[39;1mwhere[0m[35;1m([0m[37m'type'[0m[35;1m, [0m[39;1m$gridCellType[0m[35;1m->[0m[39;1mvalue[0m[35;1m)->[0m[39;1mchunkById[0m[35;1m([0m[39;1m25000[0m[35;1m, function ([0m[39;1m$gridCells[0m[35;1m) use ([0m[39;1m$dataset[0m[35;1m) {[0m
+  
+  [32;1m✓[39;22m database/seeders/GeoDataSeeder.php [90m                                                                                                                                                                                                                                                                                                                                            concat_space, single_quote, binary_operator_spaces[39m  
+  [35;1m@@ -[0m[39;1m6[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m6[0m[35;1m,[0m[39;1m11 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m class [0m[39;1mGeoDataSeeder[0m
+  [39;1m [0m[35;1m{[0m
+  [31m-    public static function importGeoDataIntoDB($command, $file, $table, $tableColumns, $ogr2ogr_options="")[39m[0m
+  [32m+    public static function importGeoDataIntoDB($command, $file, $table, $tableColumns, $ogr2ogr_options = '')[39m[0m
+  [90;3m     [0m[35;1m{[0m
+  [35;1m         [0m[39;1m$command[0m[35;1m->[0m[39;1minfo[0m[35;1m([0m[37m"Preparing data to import it into the database table [0m[35;1m{[0m[39;1m$table[0m[35;1m}[0m[37m."[0m[35;1m);[0m
+  [35;1m [0m
+  [31m-        $temp_dir = "./database/data/temp";[39m[0m
+  [32m+        $temp_dir = './database/data/temp';[39m[0m
+  [90;3m         [0m[39;1m$temp_csv [0m[35;1m= [0m[37m"[0m[35;1m{[0m[39;1m$temp_dir[0m[35;1m}[0m[37m/[0m[35;1m{[0m[39;1m$file[0m[35;1m}[0m[37m.csv"[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m         [0m[90;3m// Check if specified zip file can be opened.[0m
+  [35;1m@@ -[0m[39;1m40[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m40[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         [0m[39;1m$db_password [0m[35;1m= [0m[39;1m$db[0m[35;1m[[0m[37m'password'[0m[35;1m];[0m
+  [35;1m [0m
+  [35;1m         [0m[90;3m// Use PostgreSQL copy command to enter data from .csv file into database table.[0m
+  [31m-        passthru("psql 'postgresql://{$db_user}:{$db_password}@{$db_host}:{$db_port}/{$db_name}' -c \"\copy {$table} ({$tableColumns}) FROM '" . realpath($temp_csv) . "' DELIMITER ',' CSV HEADER;\" 2>&1");[39m[0m
+  [32m+        passthru("psql 'postgresql://{$db_user}:{$db_password}@{$db_host}:{$db_port}/{$db_name}' -c \"\copy {$table} ({$tableColumns}) FROM '".realpath($temp_csv)."' DELIMITER ',' CSV HEADER;\" 2>&1");[39m[0m
+  [90;3m [0m
+  [90;3m         // Delete the temporary directory and all files in it.[0m
+  [90;3m         [0m[39;1mexec[0m[35;1m([0m[37m"rm -rf [0m[35;1m{[0m[39;1m$temp_dir[0m[35;1m}[0m[37m"[0m[35;1m);[0m
+  
+  [32;1m✓[39;22m database/seeders/GridCellSeeder.php [90m                                                                                                                                                                                                                                                                    braces, function_declaration, lambda_not_used_import, curly_braces_position, no_whitespace_in_blank_line, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m5[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m5[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m use App\Enums\GridCellTypeEnum;[0m
+  [35;1m use Illuminate\Database\Schema\Blueprint;[0m
+  [35;1m use Illuminate\Database\Seeder;[0m
+  [32m+use Illuminate\Support\Facades\DB;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\Schema;[0m
+  [31m-use Illuminate\Support\Facades\DB;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mGridCellSeeder [0m[35;1mextends [0m[39;1mSeeder[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m18[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m18[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     public function [0m[39;1mrun[0m[35;1m()[0m
+  [35;1m     {[0m
+  [35;1m         [0m[39;1mDB[0m[35;1m::[0m[39;1mgetDoctrineSchemaManager[0m[35;1m()->[0m[39;1mgetDatabasePlatform[0m[35;1m()->[0m[39;1mregisterDoctrineTypeMapping[0m[35;1m([0m[37m'geometry'[0m[35;1m, [0m[37m'string'[0m[35;1m);[0m
+  [31m-        [39m[0m
+  [32m+[39m[0m
+  [90;3m         [0m[39;1m$this[0m[35;1m->[0m[39;1msetDefaultType[0m[35;1m([0m[39;1mGridCellTypeEnum[0m[35;1m::[0m[39;1mGrid100x100[0m[35;1m);[0m
+  [35;1m         [0m[39;1mGeoDataSeeder[0m[35;1m::[0m[39;1mimportGeoDataIntoDB[0m[35;1m([0m
+  [35;1m             [0m[39;1m$this[0m[35;1m->[0m[39;1mcommand[0m[35;1m,[0m
+  [35;1m@@ -[0m[39;1m38[0m[35;1m,[0m[39;1m13 [0m[35;1m+[0m[39;1m38[0m[35;1m,[0m[39;1m14 [0m[35;1m@@[0m
+  [35;1m         [0m[39;1m$this[0m[35;1m->[0m[39;1msetDefaultType[0m[35;1m();[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  [31m-    private function setDefaultType(GridCellTypeEnum $type = null) {[39m[0m
+  [32m+    private function setDefaultType(GridCellTypeEnum $type = null)[39m[0m
+  [32m+    {[39m[0m
+  [90;3m         [0m[35;1mif ([0m[39;1m$type [0m[35;1m=== [0m[39;1mnull[0m[35;1m) {[0m
+  [31m-            Schema::table('grid_cells', function(Blueprint $table) use($type) {[39m[0m
+  [32m+            Schema::table('grid_cells', function (Blueprint $table) {[39m[0m
+  [90;3m                 [0m[39;1m$table[0m[35;1m->[0m[39;1mstring[0m[35;1m([0m[37m'type'[0m[35;1m)->[0m[39;1mdefault[0m[35;1m([0m[39;1mnull[0m[35;1m)->[0m[39;1mnullable[0m[35;1m([0m[39;1mfalse[0m[35;1m)->[0m[39;1mchange[0m[35;1m();[0m
+  [35;1m             });[0m
+  [35;1m         } else {[0m
+  [31m-            Schema::table('grid_cells', function(Blueprint $table) use($type) {[39m[0m
+  [32m+            Schema::table('grid_cells', function (Blueprint $table) use ($type) {[39m[0m
+  [90;3m                 [0m[39;1m$table[0m[35;1m->[0m[39;1mstring[0m[35;1m([0m[37m'type'[0m[35;1m)->[0m[39;1mdefault[0m[35;1m([0m[39;1m$type[0m[35;1m->[0m[39;1mvalue[0m[35;1m)->[0m[39;1mchange[0m[35;1m();[0m
+  [35;1m             });[0m
+  [35;1m         }[0m
+  
+  [32;1m✓[39;22m database/seeders/RegionSeeder.php [90m                                                                                                                                                                                                                                                                                                                                                                      braces, no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m9 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace Database\Seeders;[0m
+  [35;1m [0m
+  [31m-use App\Models\Region;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Database\Seeder;[0m
+  [31m-use Illuminate\Database\Console\Seeds\WithoutModelEvents;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mRegionSeeder [0m[35;1mextends [0m[39;1mSeeder[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m14[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m12[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m      * @return [0m[39;1mvoid[0m
+  [39;1m      [0m[35;1m*/[0m
+  [35;1m     public function [0m[39;1mrun[0m[35;1m()[0m
+  [31m-    {   [39m[0m
+  [32m+    {[39m[0m
+  [90;3m         [0m[39;1m$this[0m[35;1m->[0m[39;1mcommand[0m[35;1m->[0m[39;1minfo[0m[35;1m([0m[37m'You can ignore the warning about progress being disabled for this seed.'[0m[35;1m);[0m
+  [35;1m [0m
+  [35;1m         [0m[39;1mGeoDataSeeder[0m[35;1m::[0m[39;1mimportGeoDataIntoDB[0m[35;1m([0m
+  
+  [32;1m✓[39;22m database/seeders/UserSeeder.php [90m                                                                                                                                                                                                                                                                                                                                                                                no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m5[0m[35;1m,[0m[39;1m9 [0m[35;1m+[0m[39;1m5[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m use App\Models\Team;[0m
+  [35;1m use App\Models\User;[0m
+  [35;1m use Illuminate\Database\Seeder;[0m
+  [31m-use Database\Factories\UserFactory;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\Hash;[0m
+  [31m-use Illuminate\Database\Console\Seeds\WithoutModelEvents;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mUserSeeder [0m[35;1mextends [0m[39;1mSeeder[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m routes/web.php [90m                                                                                                                                                                                                                                                                                                                           braces, function_declaration, curly_braces_position, no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m1[0m[35;1m,[0m[39;1m23 [0m[35;1m+[0m[39;1m1[0m[35;1m,[0m[39;1m22 [0m[35;1m@@[0m
+  [35;1m <?[0m[39;1mphp[0m
+  [39;1m [0m
+  [32m+use App\Http\Controllers\AnnotationCampaignController;[39m[0m
+  [32m+use App\Http\Controllers\AnnotationCampaignGridCellController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\DashboardController;[0m
+  [31m-use App\Http\Controllers\ExperimentDataController;[39m[0m
+  [31m-use App\Http\Controllers\ExperimentTrainController;[39m[0m
+  [31m-use Illuminate\Support\Facades\Auth;[39m[0m
+  [31m-use Illuminate\Support\Facades\Route;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\DataController;[0m
+  [31m-use App\Http\Controllers\TeamController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\DatasetController;[0m
+  [31m-use App\Http\Controllers\InspectController;[39m[0m
+  [31m-use App\Http\Controllers\RegisterController;[39m[0m
+  [32m+use App\Http\Controllers\DatasetExistingDatasetController;[39m[0m
+  [32m+use App\Http\Controllers\DatasetSubsetController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\ExperimentController;[0m
+  [31m-use App\Http\Controllers\DatasetSubsetController;[39m[0m
+  [31m-use App\Http\Controllers\AnnotationCampaignController;[39m[0m
+  [31m-use App\Http\Controllers\DatasetExistingDatasetController;[39m[0m
+  [31m-use App\Http\Controllers\AnnotationCampaignGridCellController;[39m[0m
+  [32m+use App\Http\Controllers\ExperimentDataController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\ExperimentDownloadController;[0m
+  [31m-use App\Http\Controllers\InspectConsolidateDatasetsController;[39m[0m
+  [32m+use App\Http\Controllers\ExperimentTrainController;[39m[0m
+  [32m+use App\Http\Controllers\InspectController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\PredictionDownloadController;[0m
+  [32m+use App\Http\Controllers\RegisterController;[39m[0m
+  [32m+use App\Http\Controllers\TeamController;[39m[0m
+  [32m+use Illuminate\Support\Facades\Auth;[39m[0m
+  [32m+use Illuminate\Support\Facades\Route;[39m[0m
+  [90;3m [0m
+  [90;3m /*[0m
+  [90;3m |--------------------------------------------------------------------------[0m
+  [90;3m@@ -29,7 +28,7 @@[0m
+  [90;3m | contains the "web" middleware group. Now create something great![0m
+  [90;3m |[0m
+  [90;3m */[0m
+  [31m-Route::get('/', function() {[39m[0m
+  [32m+Route::get('/', function () {[39m[0m
+  [90;3m     [0m[35;1mif ([0m[39;1mAuth[0m[35;1m::[0m[39;1mcheck[0m[35;1m()) {[0m
+  [35;1m         return [0m[39;1mredirect[0m[35;1m()->[0m[39;1mroute[0m[35;1m([0m[37m'teams.index'[0m[35;1m);[0m
+  [35;1m     }[0m
+  [35;1m@@ -[0m[39;1m48[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m47[0m[35;1m,[0m[39;1m11 [0m[35;1m@@[0m
+  [35;1m });[0m
+  [35;1m [0m
+  [35;1m [0m[90;3m// Authenticated routes.[0m
+  [31m-Route::middleware(['auth:sanctum', 'verified'])->group(function() {[39m[0m
+  [32m+Route::middleware(['auth:sanctum', 'verified'])->group(function () {[39m[0m
+  [90;3m     [0m[39;1mRoute[0m[35;1m::[0m[39;1mget[0m[35;1m([0m[37m'/teams'[0m[35;1m, [[0m[39;1mTeamController[0m[35;1m::class, [0m[37m'index'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'teams.index'[0m[35;1m);[0m
+  [35;1m [0m
+  [35;1m     [0m[90;3m// Data routes[0m
+  [31m-    Route::prefix('data')->group(function() {[39m[0m
+  [32m+    Route::prefix('data')->group(function () {[39m[0m
+  [90;3m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mget[0m[35;1m([0m[37m'/'[0m[35;1m, [[0m[39;1mDataController[0m[35;1m::class, [0m[37m'index'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'data.index'[0m[35;1m);[0m
+  [35;1m [0m
+  [35;1m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mget[0m[35;1m([0m[37m'/datasets/{dataset}'[0m[35;1m, [[0m[39;1mDatasetController[0m[35;1m::class, [0m[37m'show'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'data.datasets.show'[0m[35;1m);[0m
+  [35;1m@@ -[0m[39;1m72[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m71[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     });[0m
+  [35;1m [0m
+  [35;1m     [0m[90;3m// Inspect routes[0m
+  [31m-    Route::prefix('inspect')->group(function() {[39m[0m
+  [32m+    Route::prefix('inspect')->group(function () {[39m[0m
+  [90;3m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mget[0m[35;1m([0m[37m'/'[0m[35;1m, [[0m[39;1mInspectController[0m[35;1m::class, [0m[37m'index'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'inspect.index'[0m[35;1m);[0m
+  [35;1m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mpost[0m[35;1m([0m[37m'/'[0m[35;1m, [[0m[39;1mInspectController[0m[35;1m::class, [0m[37m'store'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'inspect.store'[0m[35;1m);[0m
+  [35;1m     });[0m
+  [35;1m@@ -[0m[39;1m81[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m80[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     [0m[39;1mRoute[0m[35;1m::[0m[39;1mresource[0m[35;1m([0m[37m'experiments'[0m[35;1m, [0m[39;1mExperimentController[0m[35;1m::class)->[0m[39;1monly[0m[35;1m([[0m
+  [35;1m         [0m[37m'index'[0m[35;1m, [0m[37m'store'[0m[35;1m, [0m[37m'show'[0m[35;1m, [0m[37m'destroy'[0m[35;1m,[0m
+  [35;1m     ]);[0m
+  [31m-    Route::prefix('experiments')->group(function() {[39m[0m
+  [32m+    Route::prefix('experiments')->group(function () {[39m[0m
+  [90;3m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mpost[0m[35;1m([0m[37m'/data'[0m[35;1m, [[0m[39;1mExperimentDataController[0m[35;1m::class, [0m[37m'store'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'experiments.data.store'[0m[35;1m);[0m
+  [35;1m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mget[0m[35;1m([0m[37m'/data/{data}'[0m[35;1m, [[0m[39;1mExperimentDataController[0m[35;1m::class, [0m[37m'show'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'experiments.data.show'[0m[35;1m);[0m
+  [35;1m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mdelete[0m[35;1m([0m[37m'/data/{data}'[0m[35;1m, [[0m[39;1mExperimentDataController[0m[35;1m::class, [0m[37m'destroy'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'experiments.data.destroy'[0m[35;1m);[0m
+  [35;1m@@ -[0m[39;1m92[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m91[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     });[0m
+  [35;1m [0m
+  [35;1m     [0m[90;3m// Dashboard routes[0m
+  [31m-    Route::prefix('dashboard')->group(function() {[39m[0m
+  [32m+    Route::prefix('dashboard')->group(function () {[39m[0m
+  [90;3m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mget[0m[35;1m([0m[37m'/'[0m[35;1m, [[0m[39;1mDashboardController[0m[35;1m::class, [0m[37m'index'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'dashboard.index'[0m[35;1m);[0m
+  [35;1m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mpost[0m[35;1m([0m[37m'/'[0m[35;1m, [[0m[39;1mDashboardController[0m[35;1m::class, [0m[37m'store'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'dashboard.store'[0m[35;1m);[0m
+  [35;1m         [0m[39;1mRoute[0m[35;1m::[0m[39;1mget[0m[35;1m([0m[37m'/{prediction}'[0m[35;1m, [[0m[39;1mDashboardController[0m[35;1m::class, [0m[37m'show'[0m[35;1m])->[0m[39;1mname[0m[35;1m([0m[37m'dashboard.show'[0m[35;1m);[0m
+  
+  [32;1m✓[39;22m tests/Feature/ExampleTest.php [90m                                                                                                                                                                                                                                                                                                                                                                                  no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace Tests\Feature;[0m
+  [35;1m [0m
+  [31m-use Illuminate\Foundation\Testing\RefreshDatabase;[39m[0m
+  [90;3m [0m[35;1muse Tests\TestCase;[0m
+  [35;1m [0m
+  [35;1m class [0m[39;1mExampleTest [0m[35;1mextends [0m[39;1mTestCase[0m
+  
+  [32;1m✓[39;22m tests/Feature/PasswordConfirmationTest.php [90m                                                                                                                                                                                                                                                                                                                                                                     no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m4[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m4[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m use App\Models\User;[0m
+  [35;1m use Illuminate\Foundation\Testing\RefreshDatabase;[0m
+  [31m-use Laravel\Jetstream\Features;[39m[0m
+  [90;3m [0m[35;1muse Tests\TestCase;[0m
+  [35;1m [0m
+  [35;1m class [0m[39;1mPasswordConfirmationTest [0m[35;1mextends [0m[39;1mTestCase[0m
+  
+
+
+Script done on 2022-07-15 13:55:03+02:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,77 @@
+Script started on 2022-09-21 16:47:59+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="138" LINES="65"]
+
+  [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m
+  [90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m
+
+  [90m──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[39m [90mLaravel[39m  
+  [90;42;1m  FIXED  [39;49;22m [90m............................................................................................[39m 191 files, 4 style issues fixed  
+  [32;1m✓[39;22m app/Events/DatasetCreated.php [90m                                                                       concat_space, no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m9 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m namespace App\Events;[0m
+  [35;1m [0m
+  [35;1m use App\Models\Dataset;[0m
+  [31m-use Illuminate\Broadcasting\Channel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\InteractsWithSockets;[0m
+  [31m-use Illuminate\Broadcasting\PresenceChannel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\PrivateChannel;[0m
+  [35;1m use Illuminate\Contracts\Broadcasting\ShouldBroadcast;[0m
+  [35;1m use Illuminate\Foundation\Events\Dispatchable;[0m
+  [35;1m@@ -[0m[39;1m35[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m33[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m     public function [0m[39;1mbroadcastOn[0m[35;1m()[0m
+  [35;1m     {[0m
+  [35;1m         return [[0m
+  [31m-            new PrivateChannel('User.' . $this->dataset->user_id),[39m[0m
+  [31m-            new PrivateChannel('Team.' . $this->dataset->team_id),[39m[0m
+  [32m+            new PrivateChannel('User.'.$this->dataset->user_id),[39m[0m
+  [32m+            new PrivateChannel('Team.'.$this->dataset->team_id),[39m[0m
+  [90;3m         [0m[35;1m];[0m
+  [35;1m     }[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m app/Events/DatasetDeleted.php [90m                                                    array_indentation, concat_space, no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m4[0m[35;1m,[0m[39;1m9 [0m[35;1m+[0m[39;1m4[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m use App\Models\Dataset;[0m
+  [35;1m use App\Models\Team;[0m
+  [31m-use Illuminate\Broadcasting\Channel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\InteractsWithSockets;[0m
+  [31m-use Illuminate\Broadcasting\PresenceChannel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\PrivateChannel;[0m
+  [35;1m use Illuminate\Contracts\Broadcasting\ShouldBroadcast;[0m
+  [35;1m use Illuminate\Foundation\Events\Dispatchable;[0m
+  [35;1m@@ -[0m[39;1m36[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m34[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m     public function [0m[39;1mbroadcastOn[0m[35;1m()[0m
+  [35;1m     {[0m
+  [35;1m         return [[0m
+  [31m-//            new PrivateChannel('User.' . $this->dataset->user_id),[39m[0m
+  [31m-            new PrivateChannel('Team.' . $this->team->id),[39m[0m
+  [32m+            //            new PrivateChannel('User.' . $this->dataset->user_id),[39m[0m
+  [32m+            new PrivateChannel('Team.'.$this->team->id),[39m[0m
+  [90;3m         [0m[35;1m];[0m
+  [35;1m     }[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/DataController.php [90m                                                                           no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m6[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m6[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m use App\Models\Filter;[0m
+  [35;1m use App\Models\Region;[0m
+  [35;1m use App\Models\SourceDataset;[0m
+  [31m-use App\Models\Team;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Http\Request;[0m
+  [35;1m use Inertia\Inertia;[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Models/Dataset.php [90m                                                                                            array_indentation[39m  
+  [35;1m@@ -[0m[39;1m17[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m17[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m     protected [0m[39;1m$dispatchesEvents [0m[35;1m= [[0m
+  [35;1m         [0m[37m'created' [0m[35;1m=> [0m[39;1mDatasetCreated[0m[35;1m::class,[0m
+  [31m-//        'deleted' => DatasetDeleted::class,[39m[0m
+  [32m+        //        'deleted' => DatasetDeleted::class,[39m[0m
+  [90;3m     [0m[35;1m];[0m
+  [35;1m [0m
+  [35;1m     public function [0m[39;1mteam[0m[35;1m()[0m
+  
+
+
+Script done on 2022-09-21 16:48:00+02:00 [COMMAND_EXIT_CODE="0"]

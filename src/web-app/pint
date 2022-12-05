@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+mkdir -p logs
+
+date="$(date +'%Y%m%dT%H%M%S%z')"
+script -q -c "./vendor/bin/pint -v" pint_logs/pint_${date}.ansi

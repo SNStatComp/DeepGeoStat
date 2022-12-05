@@ -1,0 +1,97 @@
+services:
+  api:
+    image: deepgeostat-api-dev
+    environment:
+      - WEB_APP_ADDRESS=${WEB_APP_ADDRESS:?ip-address or container name}
+      - API_REDIS_HOST=${API_REDIS_HOST:?ip-address or container name}
+      - API_REDIS_PORT=${API_REDIS_PORT:?redis port}
+      - API_REDIS_PASSWORD=${API_REDIS_PASSWORD}
+      - DOCKER_DEEPGEOSTAT_AI_IMAGE=${DOCKER_EXPERIMENT_IMAGE}
+      - IMAGE_DIRECTORY=${IMAGE_DIRECTORY:?location to grid images}
+      - CERTIFICATE_DIRECTORY=${CERTIFICATE_DIRECTORY}
+      - GPU_IDS=${GPU_IDS}
+      - CONTAINER_PER_GPU=${CONTAINER_PER_GPU}
+      - CONTAINER_ON_CPU=${CONTAINER_ON_CPU}
+      - EXPERIMENT_KWARGS=${EXPERIMENT_KWARGS}
+    build:
+      context: .
+      dockerfile: dockerfiles/api/Dockerfile.dev
+    command: [ "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001", "--reload" ]
+    restart: unless-stopped
+    tty: true
+    depends_on:
+      - api-redis
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/deepgeostat-api/app
+
+      # Needed for normal operation
+      - type: volume
+        source: experiments
+        target: /usr/deepgeostat-api/experiments
+
+      # Needed for normal operation
+      - type: bind
+        source: ${IMAGE_DIRECTORY:?location to grid images}
+        target: /usr/deepgeostat-api/images
+
+      # Needed for normal operation
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+
+    networks:
+      - app-network
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:8001/health/" ]
+      retries: 3
+      timeout: 5s
+
+  api-queue:
+    image: deepgeostat-api-dev
+    build:
+      context: .
+      dockerfile: dockerfiles/api/Dockerfile.dev
+    command: [ "rq", "worker", "-u", "redis://default:${API_REDIS_PASSWORD}@${API_REDIS_HOST}:${API_REDIS_PORT}", "--serializer", "rq.serializers.JSONSerializer" ]
+    restart: unless-stopped
+    tty: true
+    depends_on:
+      - api
+    volumes:
+      - type: bind
+        source: ./
+        target: /usr/deepgeostat-api/app
+    networks:
+      - app-network
+
+  api-redis:
+    image: ${DOCKER_API_REDIS_IMAGE:-redis/redis-stack:latest}
+    environment:
+      REDIS_PASSWORD: "${API_REDIS_PASSWORD}"
+    volumes:
+      - type: volume
+        source: api-redis
+        target: /data
+    networks:
+      - app-network
+    ports:
+      - "6380:6379"
+      - "6381:8001"
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      retries: 3
+      timeout: 5s
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  experiments:
+    name: experiments
+    driver: local
+  api-redis:
+    driver: local

@@ -1,0 +1,241 @@
+services:
+  installer:
+    profiles: [ 'installer' ]
+    image: deepgeostat-web-dev
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.dev
+      args:
+        - NODE_VERSION=${NODE_VERSION:-lts}
+        - COMPOSER_VERSION=${COMPOSER_VERSION:-latest}
+        - PHP_VERSION=${PHP_VERSION:-cli}
+    container_name: web-app-installer
+    restart: unless-stopped
+    tty: true
+    volumes:
+      # Needed for normal operation
+      - type: bind
+        source: ./
+        target: /var/www/html
+
+  serve:
+    image: deepgeostat-web-dev
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.dev
+      args:
+        - NODE_VERSION=${NODE_VERSION:-lts}
+        - COMPOSER_VERSION=${COMPOSER_VERSION:-latest}
+        - PHP_VERSION=${PHP_VERSION:-cli}
+    command: [
+      "php",
+      "artisan",
+      "serve",
+      "--host=0.0.0.0",
+      "--port=80"
+    ]
+    restart: unless-stopped
+    tty: true
+    volumes:
+      # Needed for normal operation
+      - type: bind
+        source: ./
+        target: /var/www/html
+      # Needed for normal operation
+      - type: bind
+        source: ${PHP_CONF_LOCATION:?directory to the php.ini file}
+        target: /usr/local/etc/php/conf.d/php.ini
+    networks:
+      - app-network
+    ports:
+      - 80:80
+
+  watch:
+    image: deepgeostat-web-dev
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.dev
+      args:
+        - NODE_VERSION=${NODE_VERSION:-lts}
+        - COMPOSER_VERSION=${COMPOSER_VERSION:-latest}
+        - PHP_VERSION=${PHP_VERSION:-cli}
+    command: [
+      "npm",
+      "run",
+      "watch"
+    ]
+    restart: unless-stopped
+    tty: true
+    volumes:
+      # Needed for normal operation
+      - type: bind
+        source: ./
+        target: /var/www/html
+      # Needed for normal operation
+      - type: bind
+        source: ${PHP_CONF_LOCATION:?directory to the php.ini file}
+        target: /usr/local/etc/php/conf.d/php.ini
+    networks:
+      - app-network
+    ports:
+      - 3000:3000
+
+  queue:
+    image: deepgeostat-web-dev
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.dev
+      args:
+        - NODE_VERSION=${NODE_VERSION:-lts}
+        - COMPOSER_VERSION=${COMPOSER_VERSION:-latest}
+        - PHP_VERSION=${PHP_VERSION:-cli}
+    command: [
+      "php",
+      "artisan",
+      "queue:work",
+      "--verbose"
+    ]
+    restart: unless-stopped
+    deploy:
+      mode: replicated
+      replicas: 4
+    tty: true
+    volumes:
+      # Needed for normal operation
+      - type: bind
+        source: ./
+        target: /var/www/html
+      # Needed for normal operation
+      - type: bind
+        source: ${PHP_CONF_LOCATION:?directory to the php.ini file}
+        target: /usr/local/etc/php/conf.d/php.ini
+    networks:
+      - app-network
+
+  scheduler:
+    image: deepgeostat-web-dev
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.dev
+      args:
+        - NODE_VERSION=${NODE_VERSION:-lts}
+        - COMPOSER_VERSION=${COMPOSER_VERSION:-latest}
+        - PHP_VERSION=${PHP_VERSION:-cli}
+    command: [
+      "/bin/bash",
+      "-c",
+      "while [ true ]; do php artisan schedule:run --verbose --no-interaction & sleep 60; done"
+    ]
+    restart: unless-stopped
+    stop_signal: SIGKILL
+    tty: true
+    volumes:
+      # Needed for normal operation
+      - type: bind
+        source: ./
+        target: /var/www/html
+      # Needed for normal operation
+      - type: bind
+        source: ${PHP_CONF_LOCATION:?directory to the php.ini file}
+        target: /usr/local/etc/php/conf.d/php.ini
+    networks:
+      - app-network
+
+  web-sockets:
+    image: deepgeostat-web-dev
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile.dev
+      args:
+        - NODE_VERSION=${NODE_VERSION:-lts}
+        - COMPOSER_VERSION=${COMPOSER_VERSION:-latest}
+        - PHP_VERSION=${PHP_VERSION:-cli}
+    command: [
+      "php",
+      "artisan",
+      "websockets:serve",
+      "--verbose"
+    ]
+    restart: unless-stopped
+    stop_signal: SIGKILL
+    tty: true
+    volumes:
+      # Needed for normal operation
+      - type: bind
+        source: ./
+        target: /var/www/html
+      # Needed for normal operation
+      - type: bind
+        source: ${PHP_CONF_LOCATION:?directory to the php.ini file}
+        target: /usr/local/etc/php/conf.d/php.ini
+    networks:
+      - app-network
+    ports:
+      - 6001:6001
+
+  pgsql:
+    image: ${DOCKER_PGSQL_IMAGE:-postgis/postgis:latest}
+    environment:
+      PGPASSWORD: "${DB_PASSWORD:-secret}"
+      POSTGRES_DB: "${DB_DATABASE}"
+      POSTGRES_USER: "${DB_USERNAME}"
+      POSTGRES_PASSWORD: "${DB_PASSWORD:-secret}"
+    restart: unless-stopped
+    tty: true
+    volumes:
+      # Needed for normal operation
+      - type: volume
+        source: db-data
+        target: /var/lib/postgresql/data
+    networks:
+      - app-network
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [
+        "CMD",
+        "pg_isready",
+        "-q",
+        "-d",
+        "${DB_DATABASE}",
+        "-U",
+        "${DB_USERNAME}"
+      ]
+      retries: 3
+      timeout: 5s
+
+  web-redis:
+    image: ${DOCKER_WEB_REDIS_IMAGE:-redis/redis-stack}
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - type: volume
+        source: web-redis
+        target: /data
+    networks:
+      - app-network
+    ports:
+      - "6379:6379"
+      - "6378:8001"
+    healthcheck:
+      test: [
+        "CMD",
+        "redis-cli",
+        "ping"
+      ]
+      retries: 3
+      timeout: 5s
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db-data:
+    driver: local
+  web-data:
+    driver: local
+  web-cache:
+    driver: local
+  web-redis:
+    driver: local

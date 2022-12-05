@@ -1,2 +1,4 @@
 # DeepGeoStat
-Software from the European ESSnet project Deep Geo Stat
+
+Repository for the DeepGeoStat project.
+

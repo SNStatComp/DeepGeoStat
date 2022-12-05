@@ -1,0 +1,14 @@
+.gitignore
+/experiments
+/images
+__pycache__
+/venv*
+
+# Dockerfiles
+Dockerfile
+.dockerignore
+docker-compose.*
+.env*
+
+# JetBrains
+/.idea

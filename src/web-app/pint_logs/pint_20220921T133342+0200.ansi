@@ -1,0 +1,498 @@
+Script started on 2022-09-21 13:33:42+02:00 [TERM="xterm-256color" TTY="/dev/pts/11" COLUMNS="280" LINES="66"]
+
+  [90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m
+
+  [90m────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[39m [90mLaravel[39m  
+  [90;42;1m  FIXED  [39;49;22m [90m.........................................................................................................................................................................................................................................[39m 187 files, 21 style issues fixed  
+  [32;1m✓[39;22m app/Actions/Jetstream/CreateTeam.php [90m                                                                                                                                                                                               braces, curly_braces_position, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m15 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m15 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Actions\Jetstream;[0m
+  [35;1m [0m
+  [31m-use Illuminate\Support\Str;[39m[0m
+  [31m-use Laravel\Jetstream\Jetstream;[39m[0m
+  [32m+use App\Enums\TeamDetectionTypeEnum;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\DB;[0m
+  [31m-use App\Enums\TeamDetectionTypeEnum;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\Gate;[0m
+  [32m+use Illuminate\Support\Facades\Validator;[39m[0m
+  [32m+use Illuminate\Support\Str;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Validation\Rules\Enum;[0m
+  [32m+use Laravel\Jetstream\Contracts\CreatesTeams;[39m[0m
+  [90;3m [0m[35;1muse Laravel\Jetstream\Events\AddingTeam;[0m
+  [31m-use Illuminate\Support\Facades\Validator;[39m[0m
+  [31m-use Laravel\Jetstream\Contracts\CreatesTeams;[39m[0m
+  [32m+use Laravel\Jetstream\Jetstream;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mCreateTeam [0m[35;1mimplements [0m[39;1mCreatesTeams[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Enums/LabelEvidenceTypeEnum.php [90m                                                                                                                                                                                                                      single_blank_line_at_eof[39m  
+  [35;1m@@ -[0m[39;1m6[0m[35;1m,[0m[39;1m4 [0m[35;1m+[0m[39;1m6[0m[35;1m,[0m[39;1m4 [0m[35;1m@@[0m
+  [35;1m {[0m
+  [35;1m     case [0m[39;1mAnnotationCampaign [0m[35;1m= [0m[39;1m0[0m[35;1m;[0m
+  [35;1m     case [0m[39;1mRegister [0m[35;1m= [0m[39;1m1[0m[35;1m;[0m
+  [31m-}[39m[0m
+  [35;1m\ [0m[39;1mNo newline at end of file[0m
+  [32m+}[39m[0m
+  
+  [32;1m✓[39;22m app/Enums/TeamDetectionTypeEnum.php [90m                                                                                                                                                                                                                      single_blank_line_at_eof[39m  
+  [35;1m@@ -[0m[39;1m6[0m[35;1m,[0m[39;1m4 [0m[35;1m+[0m[39;1m6[0m[35;1m,[0m[39;1m4 [0m[35;1m@@[0m
+  [35;1m {[0m
+  [35;1m     case [0m[39;1mClassification [0m[35;1m= [0m[39;1m1[0m[35;1m;[0m
+  [35;1m     case [0m[39;1mChangeDetection [0m[35;1m= [0m[39;1m2[0m[35;1m;[0m
+  [31m-}[39m[0m
+  [35;1m\ [0m[39;1mNo newline at end of file[0m
+  [32m+}[39m[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/DataController.php [90m                                                                                                                                                                                                                           ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m12 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m12 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Controllers;[0m
+  [35;1m [0m
+  [31m-use Inertia\Inertia;[39m[0m
+  [32m+use App\Http\Resources\TeamResource;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Filter;[0m
+  [35;1m use App\Models\Region;[0m
+  [32m+use App\Models\SourceDataset;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Http\Request;[0m
+  [31m-use App\Models\SourceDataset;[39m[0m
+  [31m-use App\Http\Resources\TeamResource;[39m[0m
+  [32m+use Inertia\Inertia;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mDataController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/DatasetController.php [90m                                                                                                                                                                                  array_indentation, no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m15 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m14 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Controllers;[0m
+  [35;1m [0m
+  [31m-use Inertia\Inertia;[39m[0m
+  [31m-use App\Models\Dataset;[39m[0m
+  [31m-use Illuminate\Http\Request;[39m[0m
+  [90;3m [0m[35;1muse App\Enums\TeamDetectionTypeEnum;[0m
+  [31m-use App\Http\Controllers\Controller;[39m[0m
+  [31m-use App\Http\Resources\DatasetResource;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Requests\StoreDatasetRequest;[0m
+  [35;1m use App\Http\Resources\DatasetGridResource;[0m
+  [32m+use App\Http\Resources\DatasetResource;[39m[0m
+  [90;3m [0m[35;1muse App\Jobs\CreateDataset;[0m
+  [32m+use App\Models\Dataset;[39m[0m
+  [32m+use Illuminate\Http\Request;[39m[0m
+  [32m+use Inertia\Inertia;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mDatasetController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m19[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m18[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m         [0m[39;1m$paginateAmount [0m[35;1m= ([0m[39;1m$dataset[0m[35;1m->[0m[39;1mteam[0m[35;1m->[0m[39;1mdetection_type [0m[35;1m=== [0m[39;1mTeamDetectionTypeEnum[0m[35;1m::[0m[39;1mClassification[0m[35;1m) ? [0m[39;1m9 [0m[35;1m: [0m[39;1m10[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m         return [0m[39;1mInertia[0m[35;1m::[0m[39;1mrender[0m[35;1m([0m[37m'Data/Datasets/Show'[0m[35;1m, [[0m
+  [31m-           'dataset' => DatasetResource::make($dataset->load(['team'])),[39m[0m
+  [31m-           'grid' => DatasetGridResource::collection($dataset->grids()->with(['sourceGridCell', 'sourceGridCell.dataset', 'sourceGridCell.gridCell', 'changeGridCell', 'changeGridCell.dataset', 'changeGridCell.gridCell', 'sourcePolygon', 'changePolygon'])->paginate($paginateAmount)),[39m[0m
+  [32m+            'dataset' => DatasetResource::make($dataset->load(['team'])),[39m[0m
+  [32m+            'grid' => DatasetGridResource::collection($dataset->grids()->with(['sourceGridCell', 'sourceGridCell.dataset', 'sourceGridCell.gridCell', 'changeGridCell', 'changeGridCell.dataset', 'changeGridCell.gridCell', 'sourcePolygon', 'changePolygon'])->paginate($paginateAmount)),[39m[0m
+  [90;3m         [0m[35;1m]);[0m
+  [35;1m     }[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/LabelEvidenceController.php [90m                                                                                                                                                                                                                  ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m13 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m13 [0m[35;1m@@[0m
+  [35;1m namespace App\Http\Controllers;[0m
+  [35;1m [0m
+  [35;1m use App\Enums\LabelEvidenceTypeEnum;[0m
+  [31m-use Inertia\Inertia;[39m[0m
+  [31m-use Illuminate\Http\Request;[39m[0m
+  [31m-use App\Models\LabelEvidence;[39m[0m
+  [90;3m [0m[35;1muse App\Enums\TeamDetectionTypeEnum;[0m
+  [35;1m use App\Http\Resources\DatasetGridResource;[0m
+  [32m+use App\Http\Resources\LabelEvidenceLabelResource;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Resources\LabelEvidenceResource;[0m
+  [31m-use App\Http\Resources\LabelEvidenceLabelResource;[39m[0m
+  [32m+use App\Models\LabelEvidence;[39m[0m
+  [32m+use Illuminate\Http\Request;[39m[0m
+  [32m+use Inertia\Inertia;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mLabelEvidenceController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Http/Middleware/EnsureHasTeam.php [90m                                                                                                                                                                                                                   single_line_comment_style[39m  
+  [35;1m@@ -[0m[39;1m27[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m27[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m     private function [0m[39;1mensureUserHasCurrentTeamSet[0m[35;1m()[0m
+  [35;1m     {[0m
+  [31m-        # If the user currently has no current team set, set the current team to their first team.[39m[0m
+  [32m+        // If the user currently has no current team set, set the current team to their first team.[39m[0m
+  [90;3m         [0m[35;1mif ([0m[39;1mis_null[0m[35;1m([0m[39;1mauth[0m[35;1m()->[0m[39;1muser[0m[35;1m()->[0m[39;1mcurrent_team_id[0m[35;1m)) {[0m
+  [35;1m             [0m[39;1mauth[0m[35;1m()->[0m[39;1muser[0m[35;1m()->[0m[39;1mswitchTeam[0m[35;1m([0m[39;1mauth[0m[35;1m()->[0m[39;1muser[0m[35;1m()->[0m[39;1mallTeams[0m[35;1m()->[0m[39;1mfirst[0m[35;1m());[0m
+  [35;1m         }[0m
+  
+  [32;1m✓[39;22m app/Http/Requests/StoreDatasetRequest.php [90m                                                                                                                                                                                                      no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m10 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m9 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Requests;[0m
+  [35;1m [0m
+  [31m-use Illuminate\Validation\Rule;[39m[0m
+  [90;3m [0m[35;1muse App\Enums\TeamDetectionTypeEnum;[0m
+  [31m-use App\Models\Team;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Foundation\Http\FormRequest;[0m
+  [32m+use Illuminate\Validation\Rule;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mStoreDatasetRequest [0m[35;1mextends [0m[39;1mFormRequest[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Http/Resources/DatasetGridResource.php [90m                                                                                                                                                                                    braces, function_declaration, curly_braces_position[39m  
+  [35;1m@@ -[0m[39;1m18[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m18[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m             [0m[37m'id' [0m[35;1m=> [0m[39;1m$this[0m[35;1m->[0m[39;1mid[0m[35;1m,[0m
+  [35;1m             [0m[37m'gridCells' [0m[35;1m=> [[0m
+  [35;1m                 [0m[39;1mDatasetGridCellResource[0m[35;1m::[0m[39;1mmake[0m[35;1m([0m[39;1m$this[0m[35;1m->[0m[39;1msourceGridCell[0m[35;1m, [0m[39;1m$this[0m[35;1m->[0m[39;1msourcePolygon[0m[35;1m),[0m
+  [31m-                $this->when($this->changeGridCell, function() {[39m[0m
+  [32m+                $this->when($this->changeGridCell, function () {[39m[0m
+  [90;3m                     [0m[35;1mreturn [0m[39;1mDatasetGridCellResource[0m[35;1m::[0m[39;1mmake[0m[35;1m([0m[39;1m$this[0m[35;1m->[0m[39;1mchangeGridCell[0m[35;1m, [0m[39;1m$this[0m[35;1m->[0m[39;1mchangePolygon[0m[35;1m);[0m
+  [35;1m                 }),[0m
+  [35;1m             ],[0m
+  
+  [32;1m✓[39;22m app/Http/Resources/DatasetResource.php [90m                                                                                                                                                                                                                     no_trailing_whitespace[39m  
+  [35;1m@@ -[0m[39;1m17[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m17[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m         return [[0m
+  [35;1m             [0m[37m'id' [0m[35;1m=> [0m[39;1m$this[0m[35;1m->[0m[39;1mid[0m[35;1m,[0m
+  [35;1m             [0m[37m'user' [0m[35;1m=> [0m[39;1mUserResource[0m[35;1m::[0m[39;1mmake[0m[35;1m([0m[39;1m$this[0m[35;1m->[0m[39;1mwhenLoaded[0m[35;1m([0m[37m'user'[0m[35;1m)),[0m
+  [31m-            'team' => TeamResource::make($this->whenLoaded('team')), [39m[0m
+  [32m+            'team' => TeamResource::make($this->whenLoaded('team')),[39m[0m
+  [90;3m             [0m[37m'title' [0m[35;1m=> [0m[39;1m$this[0m[35;1m->[0m[39;1mtitle[0m[35;1m,[0m
+  [35;1m             [0m[37m'description' [0m[35;1m=> [0m[39;1m$this[0m[35;1m->[0m[39;1mdescription[0m[35;1m,[0m
+  [35;1m         ];[0m
+  
+  [32;1m✓[39;22m app/Http/Resources/TeamResource.php [90m                                                                                                                                                                                                                             no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Resources;[0m
+  [35;1m [0m
+  [31m-use App\Http\Resources\LabelClassResource;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Http\Resources\Json\JsonResource;[0m
+  [35;1m [0m
+  [35;1m class [0m[39;1mTeamResource [0m[35;1mextends [0m[39;1mJsonResource[0m
+  
+  [32;1m✓[39;22m app/Jobs/CreateDataset.php [90m                                                                           class_attributes_separation, braces, function_declaration, curly_braces_position, no_unused_imports, blank_line_before_statement, ordered_imports, single_line_comment_style[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m20 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m19 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Jobs;[0m
+  [35;1m [0m
+  [31m-use App\Models\Team;[39m[0m
+  [31m-use App\Models\User;[39m[0m
+  [32m+use App\Enums\TeamDetectionTypeEnum;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Filter;[0m
+  [32m+use App\Models\GridCell;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Region;[0m
+  [31m-use App\Models\GridCell;[39m[0m
+  [90;3m [0m[35;1muse App\Models\SourceDataset;[0m
+  [32m+use App\Models\Team;[39m[0m
+  [32m+use App\Models\User;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Bus\Queueable;[0m
+  [31m-use Illuminate\Support\Facades\DB;[39m[0m
+  [31m-use App\Enums\TeamDetectionTypeEnum;[39m[0m
+  [31m-use Illuminate\Queue\SerializesModels;[39m[0m
+  [31m-use Illuminate\Queue\InteractsWithQueue;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Contracts\Queue\ShouldQueue;[0m
+  [35;1m use Illuminate\Foundation\Bus\Dispatchable;[0m
+  [31m-use Illuminate\Contracts\Queue\ShouldBeUnique;[39m[0m
+  [32m+use Illuminate\Queue\InteractsWithQueue;[39m[0m
+  [32m+use Illuminate\Queue\SerializesModels;[39m[0m
+  [32m+use Illuminate\Support\Facades\DB;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mCreateDataset [0m[35;1mimplements [0m[39;1mShouldQueue[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m24[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m23[0m[35;1m,[0m[39;1m11 [0m[35;1m@@[0m
+  [35;1m     public [0m[39;1m$timeout [0m[35;1m= [0m[39;1m60 [0m[35;1m* [0m[39;1m5[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m     public [0m[39;1m$user[0m[35;1m;[0m
+  [32m+[39m[0m
+  [90;3m     [0m[35;1mpublic [0m[39;1m$team[0m[35;1m;[0m
+  [32m+[39m[0m
+  [90;3m     [0m[35;1mpublic [0m[39;1m$datasetDetectionType[0m[35;1m;[0m
+  [32m+[39m[0m
+  [90;3m     [0m[35;1mpublic [0m[39;1m$input[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m     [0m[90;3m/**[0m
+  [90;3m@@ -49,17 +51,17 @@[0m
+  [90;3m     public function handle()[0m
+  [90;3m     {[0m
+  [90;3m         $filtersSelected = (count($this->input['surface_usage_filters']) !== 0 || count($this->input['region_filters']));[0m
+  [31m-        $sourceDatasets = SourceDataset::select(['id'])->with(['sourceGridCells' => function($query) {[39m[0m
+  [32m+        $sourceDatasets = SourceDataset::select(['id'])->with(['sourceGridCells' => function ($query) {[39m[0m
+  [90;3m             $query->select(['source_dataset_grid_cell.id', 'source_dataset_grid_cell.grid_cell_id'])->orderBy('grid_cell_id', 'asc');[0m
+  [90;3m         }])->orderBy('year', 'asc')->findOrFail($this->input['datasets']);[0m
+  [90;3m [0m
+  [90;3m         if ($filtersSelected) {[0m
+  [31m-            # Filter Dataset if selected.[39m[0m
+  [32m+            // Filter Dataset if selected.[39m[0m
+  [90;3m             if (count($this->input['surface_usage_filters']) > 0) {[0m
+  [31m-                # Apply Surface usage filters.[39m[0m
+  [32m+                // Apply Surface usage filters.[39m[0m
+  [90;3m                 if ($this->input['surface_usage_filter_mask']) {[0m
+  [31m-                    # Apply Masks from Surface usage filters.[39m[0m
+  [31m-                    $datasetGrids = Filter::with(['bbgClass.mask.polygons'])->findOrFail($this->input['surface_usage_filters'])->pluck('bbgClass.mask.polygons')->flatten()->map(function($polygon) {[39m[0m
+  [32m+                    // Apply Masks from Surface usage filters.[39m[0m
+  [32m+                    $datasetGrids = Filter::with(['bbgClass.mask.polygons'])->findOrFail($this->input['surface_usage_filters'])->pluck('bbgClass.mask.polygons')->flatten()->map(function ($polygon) {[39m[0m
+  [90;3m                         return [[0m
+  [90;3m                             'grid_cell_id' => $polygon->grid_cell_id,[0m
+  [90;3m                             'polygon_id' => $polygon->id,[0m
+  [90;3m@@ -66,9 +68,9 @@[0m
+  [90;3m                         ];[0m
+  [90;3m                     });[0m
+  [90;3m                 } else {[0m
+  [31m-                    $datasetGrids = Filter::with(['gridCells' => function($query) {[39m[0m
+  [32m+                    $datasetGrids = Filter::with(['gridCells' => function ($query) {[39m[0m
+  [90;3m                         $query->select(['grid_cell_id']);[0m
+  [31m-                    }])->findOrFail($this->input['surface_usage_filters'])->pluck('gridCells')->flatten()->unique('grid_cell_id')->map(function($grid) {[39m[0m
+  [32m+                    }])->findOrFail($this->input['surface_usage_filters'])->pluck('gridCells')->flatten()->unique('grid_cell_id')->map(function ($grid) {[39m[0m
+  [90;3m                         return [[0m
+  [90;3m                             'grid_cell_id' => $grid->grid_cell_id,[0m
+  [90;3m                         ];[0m
+  [90;3m@@ -76,12 +78,12 @@[0m
+  [90;3m                 }[0m
+  [90;3m             }[0m
+  [90;3m [0m
+  [31m-            # Region filters.[39m[0m
+  [32m+            // Region filters.[39m[0m
+  [90;3m             if (count($this->input['region_filters']) > 0) {[0m
+  [90;3m                 $regions = Region::findOrFail($this->input['region_filters']);[0m
+  [90;3m [0m
+  [31m-                $regionGridsQuery = GridCell::select('id')->where(function($query) use ($regions) {[39m[0m
+  [31m-                    $regions->each(function($region, $i) use ($query) {[39m[0m
+  [32m+                $regionGridsQuery = GridCell::select('id')->where(function ($query) use ($regions) {[39m[0m
+  [32m+                    $regions->each(function ($region, $i) use ($query) {[39m[0m
+  [90;3m                         $queryString = 'ST_Intersects(grid_cells.geometry, ?)';[0m
+  [90;3m                         if ($i === 0) {[0m
+  [90;3m                             $query->whereRaw($queryString, $region->geometry);[0m
+  [90;3m@@ -92,14 +94,14 @@[0m
+  [90;3m                 });[0m
+  [90;3m [0m
+  [90;3m                 if (isset($datasetGrids)) {[0m
+  [31m-                    # Subset has been created of the selected sources.[39m[0m
+  [31m-                    # Check within this subset which are in the selected region(s).[39m[0m
+  [32m+                    // Subset has been created of the selected sources.[39m[0m
+  [32m+                    // Check within this subset which are in the selected region(s).[39m[0m
+  [90;3m                     $regionGrids = $regionGridsQuery->whereIntegerInRaw('id', $datasetGrids->pluck('grid_cell_id'))->pluck('id');[0m
+  [90;3m [0m
+  [90;3m                     $datasetGrids = $datasetGrids->whereIn('grid_cell_id', $regionGrids)->values();[0m
+  [90;3m                 } else {[0m
+  [31m-                    # Full source datasets is being used get all grids within selected region(s).[39m[0m
+  [31m-                    $datasetGrids = $regionGridsQuery->pluck('id')->map(function($gridId) {[39m[0m
+  [32m+                    // Full source datasets is being used get all grids within selected region(s).[39m[0m
+  [32m+                    $datasetGrids = $regionGridsQuery->pluck('id')->map(function ($gridId) {[39m[0m
+  [90;3m                         return [[0m
+  [90;3m                             'grid_cell_id' => $gridId,[0m
+  [90;3m                         ];[0m
+  [90;3m@@ -107,7 +109,7 @@[0m
+  [90;3m                 }[0m
+  [90;3m             }[0m
+  [90;3m         } else {[0m
+  [31m-            $datasetGrids = $sourceDatasets->pluck('sourceGridCells')->flatten()->pluck('grid_cell_id')->unique()->map(function($gridId) {[39m[0m
+  [32m+            $datasetGrids = $sourceDatasets->pluck('sourceGridCells')->flatten()->pluck('grid_cell_id')->unique()->map(function ($gridId) {[39m[0m
+  [90;3m                 return [[0m
+  [90;3m                     'grid_cell_id' => $gridId,[0m
+  [90;3m                 ];[0m
+  [90;3m@@ -114,11 +116,12 @@[0m
+  [90;3m             });[0m
+  [90;3m         }[0m
+  [90;3m [0m
+  [31m-        # Format Dataset Grids to insert into the database.[39m[0m
+  [32m+        // Format Dataset Grids to insert into the database.[39m[0m
+  [90;3m         if ($this->datasetDetectionType === TeamDetectionTypeEnum::Classification) {[0m
+  [31m-            $grids = $sourceDatasets->map(function($sourceDataset) use($datasetGrids) {[39m[0m
+  [32m+            $grids = $sourceDatasets->map(function ($sourceDataset) use ($datasetGrids) {[39m[0m
+  [90;3m                 $sourceGrids = $sourceDataset->sourceGridCells->whereIn('grid_cell_id', $datasetGrids->pluck('grid_cell_id'))->pluck('id', 'grid_cell_id');[0m
+  [31m-                return $datasetGrids->map(function($grid) use ($sourceGrids) {[39m[0m
+  [32m+[39m[0m
+  [32m+                return $datasetGrids->map(function ($grid) use ($sourceGrids) {[39m[0m
+  [90;3m                     return [[0m
+  [90;3m                         'source_dataset_grid_cell_id' => $sourceGrids[$grid['grid_cell_id']],[0m
+  [90;3m                         'polygon_id' => (array_key_exists('polygon_id', $grid)) ? $grid['polygon_id'] : null,[0m
+  [90;3m@@ -129,7 +132,7 @@[0m
+  [90;3m             $sourceGridsFrom = $sourceDatasets[0]->sourceGridCells->whereIn('grid_cell_id', $datasetGrids->pluck('grid_cell_id'))->pluck('id', 'grid_cell_id');[0m
+  [90;3m             $sourceGridsTo = $sourceDatasets[1]->sourceGridCells->whereIn('grid_cell_id', $datasetGrids->pluck('grid_cell_id'))->pluck('id', 'grid_cell_id');[0m
+  [90;3m [0m
+  [31m-            $grids = $datasetGrids->map(function($grid) use($sourceGridsFrom, $sourceGridsTo) {[39m[0m
+  [32m+            $grids = $datasetGrids->map(function ($grid) use ($sourceGridsFrom, $sourceGridsTo) {[39m[0m
+  [90;3m                 return [[0m
+  [90;3m                     'source_dataset_grid_cell_id' => $sourceGridsFrom[$grid['grid_cell_id']],[0m
+  [90;3m                     'change_source_dataset_grid_cell_id' => $sourceGridsTo[$grid['grid_cell_id']],[0m
+  [90;3m@@ -139,10 +142,10 @@[0m
+  [90;3m             });[0m
+  [90;3m         }[0m
+  [90;3m [0m
+  [31m-        # Sort by Grid cell id.[39m[0m
+  [32m+        // Sort by Grid cell id.[39m[0m
+  [90;3m         $grids = $grids->sortBy('source_dataset_grid_cell_id')->values();[0m
+  [90;3m [0m
+  [31m-        DB::transaction(function() use($grids) {[39m[0m
+  [32m+        DB::transaction(function () use ($grids) {[39m[0m
+  [90;3m             $dataset = $this->team->datasets()->create([[0m
+  [90;3m                 'user_id' => $this->user->id,[0m
+  [90;3m                 'title' => $this->input['title'],[0m
+  [90;3m@@ -149,7 +152,7 @@[0m
+  [90;3m                 'description' => $this->input['description'],[0m
+  [90;3m             ]);[0m
+  [90;3m [0m
+  [31m-            $grids = $grids->map(function($grid) use($dataset) {[39m[0m
+  [32m+            $grids = $grids->map(function ($grid) use ($dataset) {[39m[0m
+  [90;3m                 return [[0m
+  [90;3m                     'dataset_id' => $dataset->id,[0m
+  [90;3m                     ...$grid,[0m
+  
+  [32;1m✓[39;22m app/Models/Dataset.php [90m                                                                                                                                                                                                                         no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Models;[0m
+  [35;1m [0m
+  [31m-use App\Models\Register;[39m[0m
+  [31m-use App\Models\DatasetGrid;[39m[0m
+  [31m-use App\Models\AnnotationCampaign;[39m[0m
+  [32m+use Illuminate\Database\Eloquent\Factories\HasFactory;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Database\Eloquent\Model;[0m
+  [31m-use Illuminate\Database\Eloquent\Factories\HasFactory;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mDataset [0m[35;1mextends [0m[39;1mModel[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Models/DatasetGrid.php [90m                                                                                                                                                                                                                                 no_trailing_whitespace[39m  
+  [35;1m@@ -[0m[39;1m12[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m12[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     public [0m[39;1m$timestamps [0m[35;1m= [0m[39;1mfalse[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m     protected [0m[39;1m$fillable [0m[35;1m= [[0m
+  [31m-        'source_dataset_grid_cell_id', 'polygon_id', 'source_dataset_grid_cell_change_id', 'polygon_change_id', [39m[0m
+  [32m+        'source_dataset_grid_cell_id', 'polygon_id', 'source_dataset_grid_cell_change_id', 'polygon_change_id',[39m[0m
+  [90;3m     [0m[35;1m];[0m
+  [35;1m [0m
+  [35;1m     public function [0m[39;1msourceGridCell[0m[35;1m()[0m
+  
+  [32;1m✓[39;22m app/Models/LabelEvidenceLabel.php [90m                                                                                                                                                                                                                                          braces[39m  
+  [35;1m@@ -[0m[39;1m15[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m15[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m     public function [0m[39;1muser[0m[35;1m()[0m
+  [35;1m     {[0m
+  [31m-[39m[0m
+  [90;3m     [0m[35;1m}[0m
+  [35;1m [0m
+  [35;1m     public function [0m[39;1mgrid[0m[35;1m()[0m
+  
+  [32;1m✓[39;22m app/Models/MaskPolygon.php [90m                                                                                                                                                                                      braces, function_declaration, curly_braces_position, concat_space[39m  
+  [35;1m@@ -[0m[39;1m15[0m[35;1m,[0m[39;1m10 [0m[35;1m+[0m[39;1m15[0m[35;1m,[0m[39;1m10 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m     public function [0m[39;1mgetCssPolygon[0m[35;1m()[0m
+  [35;1m     {[0m
+  [31m-        return collect($this->polygon)->map(function($coordinates) {[39m[0m
+  [31m-            return collect($coordinates)->map(function($coordinate) {[39m[0m
+  [31m-                return collect($coordinate)->map(function($point) {[39m[0m
+  [31m-                    return (($point / $this->polygon_size) * 100) . '%';[39m[0m
+  [32m+        return collect($this->polygon)->map(function ($coordinates) {[39m[0m
+  [32m+            return collect($coordinates)->map(function ($coordinate) {[39m[0m
+  [32m+                return collect($coordinate)->map(function ($point) {[39m[0m
+  [32m+                    return (($point / $this->polygon_size) * 100).'%';[39m[0m
+  [90;3m                 [0m[35;1m})->[0m[39;1mimplode[0m[35;1m([0m[37m' '[0m[35;1m);[0m
+  [35;1m             })->[0m[39;1mimplode[0m[35;1m([0m[37m', '[0m[35;1m);[0m
+  [35;1m         });[0m
+  
+  [32;1m✓[39;22m app/Models/SourceDataset.php [90m                                                                                                                                                                                                                                method_argument_space[39m  
+  [35;1m@@ -[0m[39;1m19[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m19[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m     public function [0m[39;1msourceGridCells[0m[35;1m()[0m
+  [35;1m     {[0m
+  [35;1m         return [0m[39;1m$this[0m[35;1m->[0m[39;1mhasManyThrough[0m[35;1m([0m
+  [31m-            GridCell::class, [39m[0m
+  [32m+            GridCell::class,[39m[0m
+  [90;3m             [0m[39;1mSourceDatasetGridCell[0m[35;1m::class,[0m
+  [35;1m             [0m[37m'source_dataset_id'[0m[35;1m,[0m
+  [35;1m             [0m[37m'id'[0m[35;1m,[0m
+  
+  [32;1m✓[39;22m app/Providers/AppServiceProvider.php [90m                                                                                                                                                                                                                                       braces[39m  
+  [35;1m@@ -[0m[39;1m23[0m[35;1m,[0m[39;1m6 [0m[35;1m+[0m[39;1m23[0m[35;1m,[0m[39;1m5 [0m[35;1m@@[0m
+  [35;1m      */[0m
+  [35;1m     public function [0m[39;1mboot[0m[35;1m()[0m
+  [35;1m     {[0m
+  [31m-        [39m[0m
+  [90;3m     [0m[35;1m}[0m
+  [35;1m }[0m
+  
+  [32;1m✓[39;22m database/seeders/SourceDatasetSeeder.php [90m                                                                                                                                                                                           braces, curly_braces_position, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m14 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m14 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace Database\Seeders;[0m
+  [35;1m [0m
+  [32m+use App\Enums\DatasetImageTypeEnum;[39m[0m
+  [32m+use App\Enums\GridCellTypeEnum;[39m[0m
+  [90;3m [0m[35;1muse App\Models\GridCell;[0m
+  [35;1m use App\Models\SourceDataset;[0m
+  [31m-use App\Enums\GridCellTypeEnum;[39m[0m
+  [32m+use Illuminate\Database\Schema\Blueprint;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Database\Seeder;[0m
+  [35;1m use Illuminate\Support\Facades\DB;[0m
+  [31m-use App\Enums\DatasetImageTypeEnum;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\Schema;[0m
+  [31m-use Illuminate\Database\Schema\Blueprint;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mSourceDatasetSeeder [0m[35;1mextends [0m[39;1mSeeder[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m database/seeders/TestSeeder.php [90m                                                                                                                                                                                                                no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m10 [0m[35;1m@@[0m
+  [35;1m namespace Database\Seeders;[0m
+  [35;1m [0m
+  [35;1m use App\Enums\GridCellTypeEnum;[0m
+  [32m+use App\Models\BbgClass;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Filter;[0m
+  [31m-use App\Models\BbgClass;[39m[0m
+  [90;3m [0m[35;1muse App\Models\GridCell;[0m
+  [35;1m use Illuminate\Database\Seeder;[0m
+  [31m-use Illuminate\Database\Console\Seeds\WithoutModelEvents;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mTestSeeder [0m[35;1mextends [0m[39;1mSeeder[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m routes/web.php [90m                                                                                                                                                                            braces, function_declaration, curly_braces_position, no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m1[0m[35;1m,[0m[39;1m25 [0m[35;1m+[0m[39;1m1[0m[35;1m,[0m[39;1m19 [0m[35;1m@@[0m
+  [35;1m <?[0m[39;1mphp[0m
+  [39;1m [0m
+  [31m-use App\Models\LabelEvidence;[39m[0m
+  [31m-use Illuminate\Support\Facades\Auth;[39m[0m
+  [31m-use Illuminate\Support\Facades\Route;[39m[0m
+  [32m+use App\Http\Controllers\DashboardController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\DataController;[0m
+  [31m-use App\Http\Controllers\TeamController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\DatasetController;[0m
+  [31m-use App\Http\Controllers\InspectController;[39m[0m
+  [31m-use App\Http\Controllers\RegisterController;[39m[0m
+  [31m-use App\Http\Controllers\DashboardController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\ExperimentController;[0m
+  [31m-use App\Http\Controllers\DatasetSubsetController;[39m[0m
+  [31m-use App\Http\Controllers\LabelEvidenceController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\ExperimentDataController;[0m
+  [32m+use App\Http\Controllers\ExperimentDownloadController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\ExperimentTrainController;[0m
+  [32m+use App\Http\Controllers\InspectController;[39m[0m
+  [32m+use App\Http\Controllers\LabelEvidenceController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\LabelEvidenceGridController;[0m
+  [31m-use App\Http\Controllers\AnnotationCampaignController;[39m[0m
+  [31m-use App\Http\Controllers\ExperimentDownloadController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\PredictionDownloadController;[0m
+  [31m-use App\Http\Controllers\DatasetExistingDatasetController;[39m[0m
+  [31m-use App\Http\Controllers\AnnotationCampaignGridCellController;[39m[0m
+  [32m+use App\Http\Controllers\TeamController;[39m[0m
+  [32m+use Illuminate\Support\Facades\Auth;[39m[0m
+  [32m+use Illuminate\Support\Facades\Route;[39m[0m
+  [90;3m [0m
+  [90;3m /*[0m
+  [90;3m |--------------------------------------------------------------------------[0m
+  [90;3m@@ -53,7 +47,7 @@[0m
+  [90;3m Route::middleware(['auth:sanctum', 'verified'])->group(function () {[0m
+  [90;3m     Route::get('/teams', [TeamController::class, 'index'])->name('teams.index');[0m
+  [90;3m [0m
+  [31m-    Route::middleware(['team'])->group(function() {[39m[0m
+  [32m+    Route::middleware(['team'])->group(function () {[39m[0m
+  [90;3m         // Data routes[0m
+  [90;3m         Route::prefix('data')->group(function () {[0m
+  [90;3m             Route::get('/', [DataController::class, 'index'])->name('data.index');[0m
+  
+
+
+Script done on 2022-09-21 13:33:43+02:00 [COMMAND_EXIT_CODE="0"]

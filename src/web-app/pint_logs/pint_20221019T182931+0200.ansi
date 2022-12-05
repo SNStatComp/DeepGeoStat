@@ -1,0 +1,846 @@
+Script started on 2022-10-19 18:29:31+02:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="280" LINES="71"]
+
+  [90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[90m.[39m[90m.[39m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m[90m.[39m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[32;1m✓[39;22m[90m.[39m
+
+  [90m────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────[39m [90mLaravel[39m  
+  [90;42;1m  FIXED  [39;49;22m [90m.........................................................................................................................................................................................................................................[39m 228 files, 25 style issues fixed  
+  [32;1m✓[39;22m app/Actions/DeepGeoStat/GetDatasetGrids.php [90m                                                                                                 braces, curly_braces_position, line_ending, no_unused_imports, blank_line_before_statement, ordered_imports, single_blank_line_at_eof[39m  
+  [35;1m@@ -[0m[39;1m1[0m[35;1m,[0m[39;1m121 [0m[35;1m+[0m[39;1m1[0m[35;1m,[0m[39;1m121 [0m[35;1m@@[0m
+  [31m-<?php[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-namespace App\Actions\DeepGeoStat;[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-use App\Models\Team;[0m
+  [35;1m[39m[0m
+  [31m-use App\Models\Region;[0m
+  [35;1m[39m[0m
+  [31m-use App\Models\Dataset;[0m
+  [35;1m[39m[0m
+  [31m-use App\Models\GridCell;[0m
+  [35;1m[39m[0m
+  [31m-use App\Models\SourceDataset;[0m
+  [35;1m[39m[0m
+  [31m-use App\Models\SurfaceUsageFilter;[0m
+  [35;1m[39m[0m
+  [31m-use App\Enums\LabelEvidenceTypeEnum;[0m
+  [35;1m[39m[0m
+  [31m-use App\Enums\TeamDetectionTypeEnum;[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-class GetDatasetGrids[0m
+  [35;1m[39m[0m
+  [31m-{[0m
+  [35;1m[39m[0m
+  [31m-    public static function execute(Team $team, $input) [0m
+  [35;1m[39m[0m
+  [31m-    {[0m
+  [35;1m[39m[0m
+  [31m-        $filtersSelected = ((isset($input['surface_usage_filters']) && count($input['surface_usage_filters']) !== 0) || (isset($input['region_filters']) && count($input['region_filters']) !== 0));[0m
+  [35;1m[39m[0m
+  [31m-        $sourceDatasets = SourceDataset::select(['id'])->with(['sourceGridCells' => function ($query) {[0m
+  [35;1m[39m[0m
+  [31m-            $query->select(['source_dataset_grid_cell.id', 'source_dataset_grid_cell.grid_cell_id'])->orderBy('grid_cell_id', 'asc');[0m
+  [35;1m[39m[0m
+  [31m-        }])->orderBy('year', 'asc')->findOrFail($input['datasets']);[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-        if ($filtersSelected) {[0m
+  [35;1m[39m[0m
+  [31m-            // Filter Dataset if selected.[0m
+  [35;1m[39m[0m
+  [31m-            if (isset($input['surface_usage_filters']) && count($input['surface_usage_filters']) > 0) {[0m
+  [35;1m[39m[0m
+  [31m-                // Apply Surface usage filters.[0m
+  [35;1m[39m[0m
+  [31m-                if (isset($input['surface_usage_filter_mask']) && $input['surface_usage_filter_mask']) {[0m
+  [35;1m[39m[0m
+  [31m-                    // Apply Masks from Surface usage filters.[0m
+  [35;1m[39m[0m
+  [31m-                    $datasetGrids = SurfaceUsageFilter::with(['grids.mask'])[0m
+  [35;1m[39m[0m
+  [31m-                                    ->findOrFail($input['surface_usage_filters'])[0m
+  [35;1m[39m[0m
+  [31m-                                    ->pluck('grids')[0m
+  [35;1m[39m[0m
+  [31m-                                    ->flatten()[0m
+  [35;1m[39m[0m
+  [31m-                                    ->filter(function ($grid) use ($input) {[0m
+  [35;1m[39m[0m
+  [31m-                                        return $grid->mask->options['size'] >= ((500 * 500) * (floatval($input['surface_usage_filter_mask_size']) / 100.00));[0m
+  [35;1m[39m[0m
+  [31m-                                    })[0m
+  [35;1m[39m[0m
+  [31m-                                    ->map(function ($grid) {[0m
+  [35;1m[39m[0m
+  [31m-                                        return [[0m
+  [35;1m[39m[0m
+  [31m-                                            'grid_cell_id' => $grid->grid_cell_id,[0m
+  [35;1m[39m[0m
+  [31m-                                            'mask_id' => $grid->mask_id,[0m
+  [35;1m[39m[0m
+  [31m-                                        ];[0m
+  [35;1m[39m[0m
+  [31m-                                    });[0m
+  [35;1m[39m[0m
+  [31m-                } else {[0m
+  [35;1m[39m[0m
+  [31m-                    $datasetGrids = SurfaceUsageFilter::with(['grids' => function ($query) {[0m
+  [35;1m[39m[0m
+  [31m-                        $query->select('*')->distinct('grid_cell_id');[0m
+  [35;1m[39m[0m
+  [31m-                    }])->findOrFail($input['surface_usage_filters'])->pluck('grids')->flatten()->map(function ($grid) {[0m
+  [35;1m[39m[0m
+  [31m-                        return [[0m
+  [35;1m[39m[0m
+  [31m-                            'grid_cell_id' => $grid->grid_cell_id,[0m
+  [35;1m[39m[0m
+  [31m-                        ];[0m
+  [35;1m[39m[0m
+  [31m-                    });[0m
+  [35;1m[39m[0m
+  [31m-                }[0m
+  [35;1m[39m[0m
+  [31m-            }[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-            // Region filters.[0m
+  [35;1m[39m[0m
+  [31m-            if (isset($input['region_filters']) && count($input['region_filters']) > 0) {[0m
+  [35;1m[39m[0m
+  [31m-                $regions = Region::findOrFail($input['region_filters']);[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-                $regionGridsQuery = GridCell::select('id')->where(function ($query) use ($regions) {[0m
+  [35;1m[39m[0m
+  [31m-                    $regions->each(function ($region, $i) use ($query) {[0m
+  [35;1m[39m[0m
+  [31m-                        $queryString = 'ST_Intersects(grid_cells.geometry, ?)';[0m
+  [35;1m[39m[0m
+  [31m-                        if ($i === 0) {[0m
+  [35;1m[39m[0m
+  [31m-                            $query->whereRaw($queryString, $region->geometry);[0m
+  [35;1m[39m[0m
+  [31m-                        } else {[0m
+  [35;1m[39m[0m
+  [31m-                            $query->orWhereRaw($queryString, $region->geometry);[0m
+  [35;1m[39m[0m
+  [31m-                        }[0m
+  [35;1m[39m[0m
+  [31m-                    });[0m
+  [35;1m[39m[0m
+  [31m-                });[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-                if (isset($datasetGrids)) {[0m
+  [35;1m[39m[0m
+  [31m-                    // Subset has been created of the selected sources.[0m
+  [35;1m[39m[0m
+  [31m-                    // Check within this subset which are in the selected region(s).[0m
+  [35;1m[39m[0m
+  [31m-                    $regionGrids = $regionGridsQuery->whereIntegerInRaw('id', $datasetGrids->pluck('grid_cell_id'))->pluck('id');[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-                    $datasetGrids = $datasetGrids->whereIn('grid_cell_id', $regionGrids)->values();[0m
+  [35;1m[39m[0m
+  [31m-                } else {[0m
+  [35;1m[39m[0m
+  [31m-                    // Full source datasets is being used get all grids within selected region(s).[0m
+  [35;1m[39m[0m
+  [31m-                    $datasetGrids = $regionGridsQuery->pluck('id')->map(function ($gridId) {[0m
+  [35;1m[39m[0m
+  [31m-                        return [[0m
+  [35;1m[39m[0m
+  [31m-                            'grid_cell_id' => $gridId,[0m
+  [35;1m[39m[0m
+  [31m-                        ];[0m
+  [35;1m[39m[0m
+  [31m-                    });[0m
+  [35;1m[39m[0m
+  [31m-                }[0m
+  [35;1m[39m[0m
+  [31m-            }[0m
+  [35;1m[39m[0m
+  [31m-        } else {[0m
+  [35;1m[39m[0m
+  [31m-            $datasetGrids = $sourceDatasets->pluck('sourceGridCells')->flatten()->pluck('grid_cell_id')->unique()->map(function ($gridId) {[0m
+  [35;1m[39m[0m
+  [31m-                return [[0m
+  [35;1m[39m[0m
+  [31m-                    'grid_cell_id' => $gridId,[0m
+  [35;1m[39m[0m
+  [31m-                ];[0m
+  [35;1m[39m[0m
+  [31m-            });[0m
+  [35;1m[39m[0m
+  [31m-        }[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-        // Format Dataset Grids to insert into the database.[0m
+  [35;1m[39m[0m
+  [31m-        if ($team->detection_type === TeamDetectionTypeEnum::Classification) {[0m
+  [35;1m[39m[0m
+  [31m-            $grids = $sourceDatasets->map(function ($sourceDataset) use ($datasetGrids) {[0m
+  [35;1m[39m[0m
+  [31m-                $sourceGrids = $sourceDataset->gridCells->whereIn('grid_cell_id', $datasetGrids->pluck('grid_cell_id'))->pluck('id', 'grid_cell_id');[0m
+  [35;1m[39m[0m
+  [31m-                return $datasetGrids->map(function ($grid) use ($sourceGrids) {[0m
+  [35;1m[39m[0m
+  [31m-                    return [[0m
+  [35;1m[39m[0m
+  [31m-                        'source_dataset_grid_cell_id' => $sourceGrids[$grid['grid_cell_id']],[0m
+  [35;1m[39m[0m
+  [31m-                        'mask_id' => (array_key_exists('mask_id', $grid)) ? $grid['mask_id'] : null,[0m
+  [35;1m[39m[0m
+  [31m-                    ];[0m
+  [35;1m[39m[0m
+  [31m-                });[0m
+  [35;1m[39m[0m
+  [31m-            })->flatten(1);[0m
+  [35;1m[39m[0m
+  [31m-        } else {[0m
+  [35;1m[39m[0m
+  [31m-            $sourceGridsFrom = $sourceDatasets[0]->gridCells->whereIn('grid_cell_id', $datasetGrids->pluck('grid_cell_id'))->pluck('id', 'grid_cell_id');[0m
+  [35;1m[39m[0m
+  [31m-            $sourceGridsTo = $sourceDatasets[1]->gridCells->whereIn('grid_cell_id', $datasetGrids->pluck('grid_cell_id'))->pluck('id', 'grid_cell_id');[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-            $grids = $datasetGrids->map(function ($grid) use ($sourceGridsFrom, $sourceGridsTo) {[0m
+  [35;1m[39m[0m
+  [31m-                return [[0m
+  [35;1m[39m[0m
+  [31m-                    'source_dataset_grid_cell_id' => $sourceGridsFrom[$grid['grid_cell_id']],[0m
+  [35;1m[39m[0m
+  [31m-                    'change_source_dataset_grid_cell_id' => $sourceGridsTo[$grid['grid_cell_id']],[0m
+  [35;1m[39m[0m
+  [31m-                    'mask_id' => (array_key_exists('mask_id', $grid)) ? $grid['mask_id'] : null,[0m
+  [35;1m[39m[0m
+  [31m-                    'change_mask_id' => (array_key_exists('mask_id', $grid)) ? $grid['mask_id'] : null,[0m
+  [35;1m[39m[0m
+  [31m-                ];[0m
+  [35;1m[39m[0m
+  [31m-            });[0m
+  [35;1m[39m[0m
+  [31m-        }[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-        // Sort by Grid cell id.[0m
+  [35;1m[39m[0m
+  [31m-        $grids = $grids->sortBy('source_dataset_grid_cell_id')->values();[0m
+  [35;1m[39m[0m
+  [31m-[0m
+  [35;1m[39m[0m
+  [31m-        return $grids;[0m
+  [35;1m[39m[0m
+  [31m-    }[0m
+  [35;1m[39m[0m
+  [31m-}[39m[0m
+  [35;1m\ [0m[39;1mNo newline at end of file[0m
+  [32m+<?php[39m[0m
+  [32m+[39m[0m
+  [32m+namespace App\Actions\DeepGeoStat;[39m[0m
+  [32m+[39m[0m
+  [32m+use App\Enums\TeamDetectionTypeEnum;[39m[0m
+  [32m+use App\Models\Dataset;[39m[0m
+  [32m+use App\Models\GridCell;[39m[0m
+  [32m+use App\Models\Region;[39m[0m
+  [32m+use App\Models\SourceDataset;[39m[0m
+  [32m+use App\Models\SurfaceUsageFilter;[39m[0m
+  [32m+use App\Models\Team;[39m[0m
+  [32m+[39m[0m
+  [32m+class GetDatasetGrids[39m[0m
+  [32m+{[39m[0m
+  [32m+    public static function execute(Team $team, $input)[39m[0m
+  [32m+    {[39m[0m
+  [32m+        $filtersSelected = ((isset($input['surface_usage_filters']) && count($input['surface_usage_filters']) !== 0) || (isset($input['region_filters']) && count($input['region_filters']) !== 0));[39m[0m
+  [32m+        $sourceDatasets = SourceDataset::select(['id'])->with(['sourceGridCells' => function ($query) {[39m[0m
+  [32m+            $query->select(['source_dataset_grid_cell.id', 'source_dataset_grid_cell.grid_cell_id'])->orderBy('grid_cell_id', 'asc');[39m[0m
+  [32m+        }])->orderBy('year', 'asc')->findOrFail($input['datasets']);[39m[0m
+  [32m+[39m[0m
+  [32m+        if ($filtersSelected) {[39m[0m
+  [32m+            // Filter Dataset if selected.[39m[0m
+  [32m+            if (isset($input['surface_usage_filters']) && count($input['surface_usage_filters']) > 0) {[39m[0m
+  [32m+                // Apply Surface usage filters.[39m[0m
+  [32m+                if (isset($input['surface_usage_filter_mask']) && $input['surface_usage_filter_mask']) {[39m[0m
+  [32m+                    // Apply Masks from Surface usage filters.[39m[0m
+  [32m+                    $datasetGrids = SurfaceUsageFilter::with(['grids.mask'])[39m[0m
+  [32m+                                    ->findOrFail($input['surface_usage_filters'])[39m[0m
+  [32m+                                    ->pluck('grids')[39m[0m
+  [32m+                                    ->flatten()[39m[0m
+  [32m+                                    ->filter(function ($grid) use ($input) {[39m[0m
+  [32m+                                        return $grid->mask->options['size'] >= ((500 * 500) * (floatval($input['surface_usage_filter_mask_size']) / 100.00));[39m[0m
+  [32m+                                    })[39m[0m
+  [32m+                                    ->map(function ($grid) {[39m[0m
+  [32m+                                        return [[39m[0m
+  [32m+                                            'grid_cell_id' => $grid->grid_cell_id,[39m[0m
+  [32m+                                            'mask_id' => $grid->mask_id,[39m[0m
+  [32m+                                        ];[39m[0m
+  [32m+                                    });[39m[0m
+  [32m+                } else {[39m[0m
+  [32m+                    $datasetGrids = SurfaceUsageFilter::with(['grids' => function ($query) {[39m[0m
+  [32m+                        $query->select('*')->distinct('grid_cell_id');[39m[0m
+  [32m+                    }])->findOrFail($input['surface_usage_filters'])->pluck('grids')->flatten()->map(function ($grid) {[39m[0m
+  [32m+                        return [[39m[0m
+  [32m+                            'grid_cell_id' => $grid->grid_cell_id,[39m[0m
+  [32m+                        ];[39m[0m
+  [32m+                    });[39m[0m
+  [32m+                }[39m[0m
+  [32m+            }[39m[0m
+  [32m+[39m[0m
+  [32m+            // Region filters.[39m[0m
+  [32m+            if (isset($input['region_filters']) && count($input['region_filters']) > 0) {[39m[0m
+  [32m+                $regions = Region::findOrFail($input['region_filters']);[39m[0m
+  [32m+[39m[0m
+  [32m+                $regionGridsQuery = GridCell::select('id')->where(function ($query) use ($regions) {[39m[0m
+  [32m+                    $regions->each(function ($region, $i) use ($query) {[39m[0m
+  [32m+                        $queryString = 'ST_Intersects(grid_cells.geometry, ?)';[39m[0m
+  [32m+                        if ($i === 0) {[39m[0m
+  [32m+                            $query->whereRaw($queryString, $region->geometry);[39m[0m
+  [32m+                        } else {[39m[0m
+  [32m+                            $query->orWhereRaw($queryString, $region->geometry);[39m[0m
+  [32m+                        }[39m[0m
+  [32m+                    });[39m[0m
+  [32m+                });[39m[0m
+  [32m+[39m[0m
+  [32m+                if (isset($datasetGrids)) {[39m[0m
+  [32m+                    // Subset has been created of the selected sources.[39m[0m
+  [32m+                    // Check within this subset which are in the selected region(s).[39m[0m
+  [32m+                    $regionGrids = $regionGridsQuery->whereIntegerInRaw('id', $datasetGrids->pluck('grid_cell_id'))->pluck('id');[39m[0m
+  [32m+[39m[0m
+  [32m+                    $datasetGrids = $datasetGrids->whereIn('grid_cell_id', $regionGrids)->values();[39m[0m
+  [32m+                } else {[39m[0m
+  [32m+                    // Full source datasets is being used get all grids within selected region(s).[39m[0m
+  [32m+                    $datasetGrids = $regionGridsQuery->pluck('id')->map(function ($gridId) {[39m[0m
+  [32m+                        return [[39m[0m
+  [32m+                            'grid_cell_id' => $gridId,[39m[0m
+  [32m+                        ];[39m[0m
+  [32m+                    });[39m[0m
+  [32m+                }[39m[0m
+  [32m+            }[39m[0m
+  [32m+        } else {[39m[0m
+  [32m+            $datasetGrids = $sourceDatasets->pluck('sourceGridCells')->flatten()->pluck('grid_cell_id')->unique()->map(function ($gridId) {[39m[0m
+  [32m+                return [[39m[0m
+  [32m+                    'grid_cell_id' => $gridId,[39m[0m
+  [32m+                ];[39m[0m
+  [32m+            });[39m[0m
+  [32m+        }[39m[0m
+  [32m+[39m[0m
+  [32m+        // Format Dataset Grids to insert into the database.[39m[0m
+  [32m+        if ($team->detection_type === TeamDetectionTypeEnum::Classification) {[39m[0m
+  [32m+            $grids = $sourceDatasets->map(function ($sourceDataset) use ($datasetGrids) {[39m[0m
+  [32m+                $sourceGrids = $sourceDataset->gridCells->whereIn('grid_cell_id', $datasetGrids->pluck('grid_cell_id'))->pluck('id', 'grid_cell_id');[39m[0m
+  [32m+[39m[0m
+  [32m+                return $datasetGrids->map(function ($grid) use ($sourceGrids) {[39m[0m
+  [32m+                    return [[39m[0m
+  [32m+                        'source_dataset_grid_cell_id' => $sourceGrids[$grid['grid_cell_id']],[39m[0m
+  [32m+                        'mask_id' => (array_key_exists('mask_id', $grid)) ? $grid['mask_id'] : null,[39m[0m
+  [32m+                    ];[39m[0m
+  [32m+                });[39m[0m
+  [32m+            })->flatten(1);[39m[0m
+  [32m+        } else {[39m[0m
+  [32m+            $sourceGridsFrom = $sourceDatasets[0]->gridCells->whereIn('grid_cell_id', $datasetGrids->pluck('grid_cell_id'))->pluck('id', 'grid_cell_id');[39m[0m
+  [32m+            $sourceGridsTo = $sourceDatasets[1]->gridCells->whereIn('grid_cell_id', $datasetGrids->pluck('grid_cell_id'))->pluck('id', 'grid_cell_id');[39m[0m
+  [32m+[39m[0m
+  [32m+            $grids = $datasetGrids->map(function ($grid) use ($sourceGridsFrom, $sourceGridsTo) {[39m[0m
+  [32m+                return [[39m[0m
+  [32m+                    'source_dataset_grid_cell_id' => $sourceGridsFrom[$grid['grid_cell_id']],[39m[0m
+  [32m+                    'change_source_dataset_grid_cell_id' => $sourceGridsTo[$grid['grid_cell_id']],[39m[0m
+  [32m+                    'mask_id' => (array_key_exists('mask_id', $grid)) ? $grid['mask_id'] : null,[39m[0m
+  [32m+                    'change_mask_id' => (array_key_exists('mask_id', $grid)) ? $grid['mask_id'] : null,[39m[0m
+  [32m+                ];[39m[0m
+  [32m+            });[39m[0m
+  [32m+        }[39m[0m
+  [32m+[39m[0m
+  [32m+        // Sort by Grid cell id.[39m[0m
+  [32m+        $grids = $grids->sortBy('source_dataset_grid_cell_id')->values();[39m[0m
+  [32m+[39m[0m
+  [32m+        return $grids;[39m[0m
+  [32m+    }[39m[0m
+  [32m+}[39m[0m
+  
+  [32;1m✓[39;22m app/Events/DataCreationSuccessful.php [90m                                                                                                                                                                                                          no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m13 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m11 [0m[35;1m@@[0m
+  [35;1m namespace App\Events;[0m
+  [35;1m [0m
+  [35;1m use App\Models\User;[0m
+  [31m-use Illuminate\Broadcasting\Channel;[39m[0m
+  [31m-use Illuminate\Queue\SerializesModels;[39m[0m
+  [32m+use Illuminate\Broadcasting\InteractsWithSockets;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\PrivateChannel;[0m
+  [31m-use Illuminate\Broadcasting\PresenceChannel;[39m[0m
+  [32m+use Illuminate\Contracts\Broadcasting\ShouldBroadcast;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Foundation\Events\Dispatchable;[0m
+  [31m-use Illuminate\Broadcasting\InteractsWithSockets;[39m[0m
+  [31m-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;[39m[0m
+  [32m+use Illuminate\Queue\SerializesModels;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mDataCreationSuccessful [0m[35;1mimplements [0m[39;1mShouldBroadcast[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Events/ExperimentCreated.php [90m                                                                                                                                                                                                                                no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m namespace App\Events;[0m
+  [35;1m [0m
+  [35;1m use App\Models\Experiment;[0m
+  [31m-use Illuminate\Broadcasting\Channel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\InteractsWithSockets;[0m
+  [31m-use Illuminate\Broadcasting\PresenceChannel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\PrivateChannel;[0m
+  [31m-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Foundation\Events\Dispatchable;[0m
+  [35;1m use Illuminate\Queue\SerializesModels;[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Events/ExperimentDeleted.php [90m                                                                                                                                                                                                                                no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m namespace App\Events;[0m
+  [35;1m [0m
+  [35;1m use App\Models\Experiment;[0m
+  [31m-use Illuminate\Broadcasting\Channel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\InteractsWithSockets;[0m
+  [31m-use Illuminate\Broadcasting\PresenceChannel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\PrivateChannel;[0m
+  [31m-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Foundation\Events\Dispatchable;[0m
+  [35;1m use Illuminate\Queue\SerializesModels;[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Events/PredictionCreated.php [90m                                                                                                                                                                                                                                no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m namespace App\Events;[0m
+  [35;1m [0m
+  [35;1m use App\Models\Prediction;[0m
+  [31m-use Illuminate\Broadcasting\Channel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\InteractsWithSockets;[0m
+  [31m-use Illuminate\Broadcasting\PresenceChannel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\PrivateChannel;[0m
+  [31m-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Foundation\Events\Dispatchable;[0m
+  [35;1m use Illuminate\Queue\SerializesModels;[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Events/PredictionDeleted.php [90m                                                                                                                                                                                                                                no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m namespace App\Events;[0m
+  [35;1m [0m
+  [35;1m use App\Models\Prediction;[0m
+  [31m-use Illuminate\Broadcasting\Channel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\InteractsWithSockets;[0m
+  [31m-use Illuminate\Broadcasting\PresenceChannel;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Broadcasting\PrivateChannel;[0m
+  [31m-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Foundation\Events\Dispatchable;[0m
+  [35;1m use Illuminate\Queue\SerializesModels;[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/Api/ExperimentErrorController.php [90m                                                                                                                                                                                                            ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m11 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Controllers\Api;[0m
+  [35;1m [0m
+  [32m+use App\Enums\ExperimentStatusEnum;[39m[0m
+  [32m+use App\Events\DataCreationFailed;[39m[0m
+  [32m+use App\Http\Controllers\Controller;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Experiment;[0m
+  [35;1m use Illuminate\Http\Request;[0m
+  [31m-use App\Events\DataCreationFailed;[39m[0m
+  [31m-use App\Enums\ExperimentStatusEnum;[39m[0m
+  [31m-use App\Http\Controllers\Controller;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mExperimentErrorController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/Api/InspectErrorController.php [90m                                                                                                                                                   unary_operator_spaces, no_unused_imports, not_operator_with_successor_space[39m  
+  [35;1m@@ -[0m[39;1m4[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m4[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m use App\Events\DataCreationFailed;[0m
+  [35;1m use App\Http\Controllers\Controller;[0m
+  [31m-use App\Models\Dataset;[39m[0m
+  [90;3m [0m[35;1muse App\Models\User;[0m
+  [35;1m use Illuminate\Http\Request;[0m
+  [35;1m use Illuminate\Support\Facades\Cache;[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/Api/InspectFinishController.php [90m                                                                                                                                                    unary_operator_spaces, not_operator_with_successor_space, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m13 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m13 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Controllers\Api;[0m
+  [35;1m [0m
+  [32m+use App\Http\Controllers\Controller;[39m[0m
+  [32m+use App\Jobs\StoreInspectDataset;[39m[0m
+  [32m+use App\Models\Dataset;[39m[0m
+  [90;3m [0m[35;1muse App\Models\User;[0m
+  [31m-use App\Models\Dataset;[39m[0m
+  [31m-use Illuminate\Support\Str;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Http\Request;[0m
+  [31m-use App\Jobs\StoreInspectDataset;[39m[0m
+  [31m-use App\Http\Controllers\Controller;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\Cache;[0m
+  [32m+use Illuminate\Support\Str;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mInspectFinishController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/Api/PredictionErrorController.php [90m                                                                                                                               unary_operator_spaces, no_unused_imports, not_operator_with_successor_space, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m15 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m12 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Controllers\Api;[0m
+  [35;1m [0m
+  [32m+use App\Events\DataCreationFailed;[39m[0m
+  [32m+use App\Http\Controllers\Controller;[39m[0m
+  [90;3m [0m[35;1muse App\Models\User;[0m
+  [31m-use App\Models\Dataset;[39m[0m
+  [31m-use App\Models\Experiment;[39m[0m
+  [31m-use Illuminate\Support\Str;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Http\Request;[0m
+  [31m-use App\Events\DataCreationFailed;[39m[0m
+  [31m-use App\Jobs\CreateInspectDataset;[39m[0m
+  [31m-use App\Http\Controllers\Controller;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\Cache;[0m
+  [32m+use Illuminate\Support\Str;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mPredictionErrorController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/Api/PredictionFinishController.php [90m                                                                                                                                               unary_operator_spaces, no_unused_imports, not_operator_with_successor_space[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m namespace App\Http\Controllers\Api;[0m
+  [35;1m [0m
+  [35;1m use App\Http\Controllers\Controller;[0m
+  [31m-use App\Jobs\CreateInspectDataset;[39m[0m
+  [90;3m [0m[35;1muse App\Jobs\StorePredictions;[0m
+  [31m-use App\Models\Dataset;[39m[0m
+  [31m-use App\Models\Experiment;[39m[0m
+  [31m-use App\Models\User;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Http\Request;[0m
+  [35;1m use Illuminate\Support\Facades\Cache;[0m
+  [35;1m use Illuminate\Support\Str;[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/ExperimentController.php [90m                                                                                                                                                           unary_operator_spaces, not_operator_with_successor_space, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m19 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m19 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Controllers;[0m
+  [35;1m [0m
+  [31m-use Exception;[39m[0m
+  [31m-use Inertia\Inertia;[39m[0m
+  [32m+use App\Enums\ExperimentModelTypeEnum;[39m[0m
+  [32m+use App\Enums\ExperimentStatusEnum;[39m[0m
+  [32m+use App\Http\Resources\ExperimentResource;[39m[0m
+  [32m+use App\Http\Resources\SurfaceUsageFilterResource;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Experiment;[0m
+  [31m-use Illuminate\Http\Request;[39m[0m
+  [90;3m [0m[35;1muse App\Models\SourceDataset;[0m
+  [35;1m use App\Models\SurfaceUsageFilter;[0m
+  [32m+use Exception;[39m[0m
+  [32m+use Illuminate\Http\Request;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\DB;[0m
+  [31m-use App\Enums\ExperimentStatusEnum;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\Http;[0m
+  [35;1m use Illuminate\Validation\Rules\Enum;[0m
+  [31m-use App\Enums\ExperimentModelTypeEnum;[39m[0m
+  [31m-use App\Http\Resources\ExperimentResource;[39m[0m
+  [31m-use App\Http\Resources\SurfaceUsageFilterResource;[39m[0m
+  [32m+use Inertia\Inertia;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mExperimentController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Http/Controllers/ExperimentPredictionController.php [90m                                                                                                                                                                                                           ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m11 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m11 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Http\Controllers;[0m
+  [35;1m [0m
+  [32m+use App\Enums\TeamDetectionTypeEnum;[39m[0m
+  [32m+use App\Jobs\CreatePredictions;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Experiment;[0m
+  [35;1m use Illuminate\Http\Request;[0m
+  [35;1m use Illuminate\Validation\Rule;[0m
+  [31m-use App\Enums\TeamDetectionTypeEnum;[39m[0m
+  [31m-use App\Jobs\CreatePredictions;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mExperimentPredictionController [0m[35;1mextends [0m[39;1mController[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Http/Resources/ExperimentResource.php [90m                                                                                                                                                               unary_operator_spaces, not_operator_with_successor_space, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m8 [0m[35;1m@@[0m
+  [35;1m namespace App\Http\Resources;[0m
+  [35;1m [0m
+  [35;1m use [0m[39;1mException[0m[35;1m;[0m
+  [32m+use Illuminate\Http\Resources\Json\JsonResource;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Support\Facades\Http;[0m
+  [31m-use Illuminate\Http\Resources\Json\JsonResource;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mExperimentResource [0m[35;1mextends [0m[39;1mJsonResource[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Jobs/CreateDataset.php [90m                                                                                                                                                                                                       braces, curly_braces_position, no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m12 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m7 [0m[35;1m@@[0m
+  [35;1m namespace App\Jobs;[0m
+  [35;1m [0m
+  [35;1m use App\Actions\DeepGeoStat\GetDatasetGrids;[0m
+  [31m-use App\Enums\TeamDetectionTypeEnum;[39m[0m
+  [90;3m [0m[35;1muse App\Events\DataCreationFailed;[0m
+  [31m-use App\Models\GridCell;[39m[0m
+  [31m-use App\Models\Region;[39m[0m
+  [31m-use App\Models\SourceDataset;[39m[0m
+  [31m-use App\Models\SurfaceUsageFilter;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Team;[0m
+  [35;1m use App\Models\User;[0m
+  [35;1m use Illuminate\Bus\Queueable;[0m
+  
+  [32;1m✓[39;22m app/Jobs/CreateLabelEvidenceFromRegister.php [90m                                                                                                                           braces, curly_braces_position, unary_operator_spaces, no_unused_imports, not_operator_with_successor_space[39m  
+  [35;1m@@ -[0m[39;1m4[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m4[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m use App\Enums\LabelEvidenceTypeEnum;[0m
+  [35;1m use App\Events\DataCreationFailed;[0m
+  [31m-use App\Events\LabelEvidenceCreated;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Dataset;[0m
+  [35;1m use App\Models\Register;[0m
+  [35;1m use App\Models\Team;[0m
+  
+  [32;1m✓[39;22m app/Jobs/CreatePredictions.php [90m                                                                             class_attributes_separation, braces, curly_braces_position, single_quote, unary_operator_spaces, no_unused_imports, not_operator_with_successor_space, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m23 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m22 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Jobs;[0m
+  [35;1m [0m
+  [31m-use Exception;[39m[0m
+  [31m-use Throwable;[39m[0m
+  [32m+use App\Actions\DeepGeoStat\GetDatasetGrids;[39m[0m
+  [32m+use App\Events\DataCreationFailed;[39m[0m
+  [32m+use App\Models\Experiment;[39m[0m
+  [90;3m [0m[35;1muse App\Models\Mask;[0m
+  [32m+use App\Models\SourceDataset;[39m[0m
+  [90;3m [0m[35;1muse App\Models\User;[0m
+  [31m-use App\Models\Experiment;[39m[0m
+  [31m-use Illuminate\Support\Str;[39m[0m
+  [31m-use App\Models\SourceDataset;[39m[0m
+  [32m+use Exception;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Bus\Queueable;[0m
+  [31m-use App\Events\DataCreationFailed;[39m[0m
+  [31m-use Illuminate\Support\Facades\Http;[39m[0m
+  [31m-use Illuminate\Support\Facades\Cache;[39m[0m
+  [31m-use Illuminate\Queue\SerializesModels;[39m[0m
+  [31m-use Illuminate\Queue\InteractsWithQueue;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Contracts\Queue\ShouldQueue;[0m
+  [35;1m use Illuminate\Foundation\Bus\Dispatchable;[0m
+  [31m-use App\Actions\DeepGeoStat\GetDatasetGrids;[39m[0m
+  [31m-use Illuminate\Contracts\Queue\ShouldBeUnique;[39m[0m
+  [32m+use Illuminate\Queue\InteractsWithQueue;[39m[0m
+  [32m+use Illuminate\Queue\SerializesModels;[39m[0m
+  [32m+use Illuminate\Support\Facades\Cache;[39m[0m
+  [32m+use Illuminate\Support\Facades\Http;[39m[0m
+  [32m+use Illuminate\Support\Str;[39m[0m
+  [32m+use Throwable;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mCreatePredictions [0m[35;1mimplements [0m[39;1mShouldQueue[0m
+  [39;1m [0m[35;1m{[0m
+  [35;1m@@ -[0m[39;1m25[0m[35;1m,[0m[39;1m7 [0m[35;1m+[0m[39;1m24[0m[35;1m,[0m[39;1m9 [0m[35;1m@@[0m
+  [35;1m     use [0m[39;1mDispatchable[0m[35;1m, [0m[39;1mInteractsWithQueue[0m[35;1m, [0m[39;1mQueueable[0m[35;1m, [0m[39;1mSerializesModels[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m     public [0m[39;1m$user[0m[35;1m;[0m
+  [32m+[39m[0m
+  [90;3m     [0m[35;1mpublic [0m[39;1m$experiment[0m[35;1m;[0m
+  [32m+[39m[0m
+  [90;3m     [0m[35;1mpublic [0m[39;1m$input[0m[35;1m;[0m
+  [35;1m [0m
+  [35;1m     [0m[90;3m/**[0m
+  [90;3m@@ -113,7 +114,7 @@[0m
+  [90;3m         ]);[0m
+  [90;3m [0m
+  [90;3m         if (! $httpResponse->successful()) {[0m
+  [31m-            throw new Exception("Failed to send prediction data to API");[39m[0m
+  [32m+            throw new Exception('Failed to send prediction data to API');[39m[0m
+  [90;3m         }[0m
+  [90;3m     }[0m
+  [90;3m [0m
+  
+  [32;1m✓[39;22m app/Jobs/StoreInspectDataset.php [90m                                                                                                                                                                                braces, curly_braces_position, no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m18 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m17 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Jobs;[0m
+  [35;1m [0m
+  [31m-use Throwable;[39m[0m
+  [32m+use App\Events\DataCreationFailed;[39m[0m
+  [32m+use App\Events\DataCreationSuccessful;[39m[0m
+  [32m+use App\Models\Dataset;[39m[0m
+  [90;3m [0m[35;1muse App\Models\User;[0m
+  [31m-use App\Models\Dataset;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Bus\Queueable;[0m
+  [31m-use App\Events\DataCreationFailed;[39m[0m
+  [31m-use Illuminate\Support\Facades\DB;[39m[0m
+  [31m-use App\Events\InspectDatasetCreated;[39m[0m
+  [31m-use App\Events\DataCreationSuccessful;[39m[0m
+  [31m-use Illuminate\Queue\SerializesModels;[39m[0m
+  [31m-use Illuminate\Queue\InteractsWithQueue;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Contracts\Queue\ShouldQueue;[0m
+  [35;1m use Illuminate\Foundation\Bus\Dispatchable;[0m
+  [32m+use Illuminate\Queue\InteractsWithQueue;[39m[0m
+  [32m+use Illuminate\Queue\SerializesModels;[39m[0m
+  [32m+use Illuminate\Support\Facades\DB;[39m[0m
+  [32m+use Throwable;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mStoreInspectDataset [0m[35;1mimplements [0m[39;1mShouldQueue[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Jobs/StorePredictions.php [90m                                                                                                                                                                                   braces, curly_braces_position, no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m17 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m16 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Jobs;[0m
+  [35;1m [0m
+  [31m-use Throwable;[39m[0m
+  [32m+use App\Events\DataCreationFailed;[39m[0m
+  [32m+use App\Models\Experiment;[39m[0m
+  [90;3m [0m[35;1muse App\Models\User;[0m
+  [31m-use App\Models\Experiment;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Bus\Queueable;[0m
+  [31m-use App\Events\DataCreationFailed;[39m[0m
+  [31m-use Illuminate\Support\Facades\DB;[39m[0m
+  [31m-use Illuminate\Queue\SerializesModels;[39m[0m
+  [31m-use Illuminate\Queue\InteractsWithQueue;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Contracts\Queue\ShouldQueue;[0m
+  [35;1m use Illuminate\Foundation\Bus\Dispatchable;[0m
+  [31m-use Illuminate\Contracts\Queue\ShouldBeUnique;[39m[0m
+  [32m+use Illuminate\Queue\InteractsWithQueue;[39m[0m
+  [32m+use Illuminate\Queue\SerializesModels;[39m[0m
+  [32m+use Illuminate\Support\Facades\DB;[39m[0m
+  [32m+use Throwable;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mStorePredictions [0m[35;1mimplements [0m[39;1mShouldQueue[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Models/Dataset.php [90m                                                                                                                                                                                braces, curly_braces_position, no_unused_imports, single_line_comment_style[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Models;[0m
+  [35;1m [0m
+  [31m-use App\Events\DatasetCreated;[39m[0m
+  [31m-use App\Events\DatasetDeleted;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Database\Eloquent\Factories\HasFactory;[0m
+  [35;1m use Illuminate\Database\Eloquent\Model;[0m
+  [35;1m [0m
+  [35;1m@@ -[0m[39;1m48[0m[35;1m,[0m[39;1m17 [0m[35;1m+[0m[39;1m46[0m[35;1m,[0m[39;1m17 [0m[35;1m@@[0m
+  [35;1m     protected static function [0m[39;1mbooted[0m[35;1m()[0m
+  [35;1m     {[0m
+  [35;1m         static::[0m[39;1mdeleting[0m[35;1m(function ([0m[39;1m$dataset[0m[35;1m) {[0m
+  [31m-            # Delete Label Evidence[39m[0m
+  [32m+            // Delete Label Evidence[39m[0m
+  [90;3m             [0m[39;1m$dataset[0m[35;1m->[0m[39;1mlabelEvidence[0m[35;1m()->[0m[39;1meach[0m[35;1m(function ([0m[39;1m$labelEvidence[0m[35;1m) {[0m
+  [35;1m                 [0m[39;1m$labelEvidence[0m[35;1m->[0m[39;1mdelete[0m[35;1m();[0m
+  [35;1m             });[0m
+  [35;1m [0m
+  [31m-            # Delete Inspect Dataset[39m[0m
+  [32m+            // Delete Inspect Dataset[39m[0m
+  [90;3m             [0m[39;1m$dataset[0m[35;1m->[0m[39;1minspects[0m[35;1m()->[0m[39;1meach[0m[35;1m(function ([0m[39;1m$inspect[0m[35;1m) {[0m
+  [35;1m                 [0m[39;1m$inspect[0m[35;1m->[0m[39;1mdelete[0m[35;1m();[0m
+  [35;1m             });[0m
+  [35;1m [0m
+  [31m-            # Delete Grids[39m[0m
+  [32m+            // Delete Grids[39m[0m
+  [90;3m             [0m[39;1m$dataset[0m[35;1m->[0m[39;1mgrids[0m[35;1m()->[0m[39;1mdelete[0m[35;1m();[0m
+  [35;1m         });[0m
+  [35;1m     }[0m
+  
+  [32;1m✓[39;22m app/Models/LabelEvidence.php [90m                                                                                                                                                                                                                                    no_unused_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m8 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m6 [0m[35;1m@@[0m
+  [35;1m namespace App\Models;[0m
+  [35;1m [0m
+  [35;1m use App\Enums\LabelEvidenceTypeEnum;[0m
+  [31m-use App\Events\LabelEvidenceCreated;[39m[0m
+  [31m-use App\Events\LabelEvidenceDeleted;[39m[0m
+  [90;3m [0m[35;1muse Illuminate\Database\Eloquent\Factories\HasFactory;[0m
+  [35;1m use Illuminate\Database\Eloquent\Model;[0m
+  [35;1m [0m
+  
+  [32;1m✓[39;22m app/Observers/DatasetObserver.php [90m                                                                                                                                                                                                                                 ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m3[0m[35;1m,[0m[39;1m9 [0m[35;1m+[0m[39;1m3[0m[35;1m,[0m[39;1m9 [0m[35;1m@@[0m
+  [35;1m namespace App\Observers;[0m
+  [35;1m [0m
+  [35;1m use App\Events\DataCreationSuccessful;[0m
+  [31m-use App\Models\Dataset;[39m[0m
+  [90;3m [0m[35;1muse App\Events\DatasetCreated;[0m
+  [35;1m use App\Events\DatasetDeleted;[0m
+  [32m+use App\Models\Dataset;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mDatasetObserver[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m app/Observers/PredictionObserver.php [90m                                                                                                                                                                                                                              ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m2[0m[35;1m,[0m[39;1m10 [0m[35;1m+[0m[39;1m2[0m[35;1m,[0m[39;1m10 [0m[35;1m@@[0m
+  [35;1m [0m
+  [35;1m namespace App\Observers;[0m
+  [35;1m [0m
+  [31m-use App\Models\Prediction;[39m[0m
+  [32m+use App\Events\DataCreationSuccessful;[39m[0m
+  [90;3m [0m[35;1muse App\Events\PredictionCreated;[0m
+  [35;1m use App\Events\PredictionDeleted;[0m
+  [31m-use App\Events\DataCreationSuccessful;[39m[0m
+  [32m+use App\Models\Prediction;[39m[0m
+  [90;3m [0m
+  [90;3m [0m[35;1mclass [0m[39;1mPredictionObserver[0m
+  [39;1m [0m[35;1m{[0m
+  
+  [32;1m✓[39;22m routes/api.php [90m                                                                                                                                                                                                                                                    ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m1[0m[35;1m,[0m[39;1m12 [0m[35;1m+[0m[39;1m1[0m[35;1m,[0m[39;1m12 [0m[35;1m@@[0m
+  [35;1m <?[0m[39;1mphp[0m
+  [39;1m [0m
+  [31m-use Illuminate\Support\Facades\Route;[39m[0m
+  [32m+use App\Http\Controllers\Api\ExperimentErrorController;[39m[0m
+  [32m+use App\Http\Controllers\Api\ExperimentFinishController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\Api\InspectErrorController;[0m
+  [35;1m use App\Http\Controllers\Api\InspectFinishController;[0m
+  [31m-use App\Http\Controllers\Api\ExperimentErrorController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\Api\PredictionErrorController;[0m
+  [31m-use App\Http\Controllers\Api\ExperimentFinishController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\Api\PredictionFinishController;[0m
+  [32m+use Illuminate\Support\Facades\Route;[39m[0m
+  [90;3m [0m
+  [90;3m /*[0m
+  [90;3m |--------------------------------------------------------------------------[0m
+  
+  [32;1m✓[39;22m routes/web.php [90m                                                                                                                                                                                                  braces, curly_braces_position, no_unused_imports, ordered_imports[39m  
+  [35;1m@@ -[0m[39;1m1[0m[35;1m,[0m[39;1m22 [0m[35;1m+[0m[39;1m1[0m[35;1m,[0m[39;1m20 [0m[35;1m@@[0m
+  [35;1m <?[0m[39;1mphp[0m
+  [39;1m [0m
+  [31m-use Illuminate\Support\Facades\Auth;[39m[0m
+  [31m-use Illuminate\Support\Facades\Route;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\DataController;[0m
+  [31m-use App\Http\Controllers\TeamController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\DatasetController;[0m
+  [31m-use App\Http\Controllers\InspectController;[39m[0m
+  [31m-use App\Http\Controllers\DashboardController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\ExperimentController;[0m
+  [31m-use App\Http\Controllers\InspectSaveController;[39m[0m
+  [31m-use App\Http\Controllers\LabelEvidenceController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\ExperimentDataController;[0m
+  [31m-use App\Http\Controllers\ExperimentTrainController;[39m[0m
+  [31m-use App\Http\Controllers\LabelEvidenceGridController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\ExperimentDownloadController;[0m
+  [31m-use App\Http\Controllers\PredictionDownloadController;[39m[0m
+  [90;3m [0m[35;1muse App\Http\Controllers\ExperimentPredictionController;[0m
+  [35;1m use App\Http\Controllers\ExperimentPredictionDownloadController;[0m
+  [32m+use App\Http\Controllers\ExperimentTrainController;[39m[0m
+  [32m+use App\Http\Controllers\InspectController;[39m[0m
+  [32m+use App\Http\Controllers\InspectSaveController;[39m[0m
+  [32m+use App\Http\Controllers\LabelEvidenceController;[39m[0m
+  [32m+use App\Http\Controllers\LabelEvidenceGridController;[39m[0m
+  [32m+use App\Http\Controllers\TeamController;[39m[0m
+  [32m+use Illuminate\Support\Facades\Auth;[39m[0m
+  [32m+use Illuminate\Support\Facades\Route;[39m[0m
+  [90;3m [0m
+  [90;3m /*[0m
+  [90;3m |--------------------------------------------------------------------------[0m
+  
+
+
+Script done on 2022-10-19 18:29:32+02:00 [COMMAND_EXIT_CODE="0"]

@@ -1,0 +1,65 @@
+ARG NODE_VERSION=lts
+ARG COMPOSER_VERSION=latest
+ARG PHP_VERSION=cli
+
+
+# Get Node
+FROM node:${NODE_VERSION} AS node
+
+
+# Get Composer
+FROM composer:${COMPOSER_VERSION} AS composer
+
+
+# Build Docker image for development
+FROM php:${PHP_VERSION}
+
+ARG WWWUSER=1000
+ARG WWWGROUP=1000
+
+WORKDIR /var/www/html
+
+RUN usermod -u ${WWWUSER} www-data \
+ && groupmod -g ${WWWGROUP} www-data
+
+RUN apt-get update \
+ && apt-get dist-upgrade -y \
+ && apt-get install -y \
+    libzip-dev \
+    zip \
+    libpq-dev \
+    gdal-bin \
+    postgresql-client \
+    git \
+    vim
+
+COPY --from=node --chown=www-data:www-data /usr/local/lib/node_modules /usr/local/lib/node_modules
+COPY --from=node --chown=www-data:www-data /usr/local/bin/node /usr/local/bin/node
+RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm \
+ && chown -h www-data:www-data /usr/local/bin/npm \
+ && chown -R www-data:www-data /var/www
+COPY --from=composer --chown=www-data:www-data /usr/bin/composer /usr/local/bin/composer
+
+## php extensions
+# phpredis
+RUN curl -L $(curl -s https://api.github.com/repos/phpredis/phpredis/releases/latest | grep "tarball_url" | cut -d '"' -f 4) --output phpredis.tar.gz \
+ && tar -xvf phpredis.tar.gz --one-top-level --strip-components=1 \
+ && cd phpredis \
+ && phpize \
+ && ./configure \
+ && make \
+ && make install \
+ && docker-php-ext-enable redis.so \
+ && cd ../ \
+ && rm -r phpredis \
+          phpredis.tar.gz
+
+RUN docker-php-ext-install \
+    pgsql \
+    pdo_pgsql \
+    zip \
+    pcntl
+
+USER www-data
+
+

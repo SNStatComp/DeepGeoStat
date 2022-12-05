@@ -1,0 +1,227 @@
+services:
+    web-app:
+        image: ${DOCKER_WEB_APP_IMAGE:-registry.gitlab.com/cbds/deepgeostat/deepgeostat-web:latest}
+        command: [ "php-fpm" ]
+        restart: unless-stopped
+        tty: true
+        depends_on:
+            - pgsql
+            - web-redis
+        volumes:
+            # Needed for normal operation
+            -   type: volume
+                source: web-data
+                target: /var/www/html/public
+
+            # Needed for normal operation
+            -   type: volume
+                source: web-cache
+                target: /var/www/html/bootstrap/cache
+
+            # Needed for normal operation
+            -   type: volume
+                source: web-storage
+                target: /var/www/html/storage
+
+            # Needed for normal operation
+            -   type: bind
+                source: ${ENV_LOCATION:?directory to .env file}
+                target: /var/www/html/.env
+
+            # Needed for normal operation
+            -   type: bind
+                source: ${PHP_CONF_LOCATION:?directory to the php.ini file}
+                target: /usr/local/etc/php/conf.d/php.ini
+        networks:
+            - app-network
+
+    web-server:
+        image: ${DOCKER_WEB_SERVER_IMAGE:-nginx:alpine}
+        restart: unless-stopped
+        tty: true
+        depends_on:
+            - web-app
+        volumes:
+            # Needed for normal operation
+            -   type: volume
+                source: web-data
+                target: /var/www/html/public
+
+            # Needed for normal operation
+            -   type: bind
+                source: ${NGINX_CONF_LOCATION:?directory to the nginx.conf file}
+                target: /etc/nginx/conf.d
+        networks:
+            - app-network
+        ports:
+            - "80:80"
+            - "443:443"
+
+    web-queue:
+        image: ${DOCKER_WEB_APP_IMAGE:-registry.gitlab.com/cbds/deepgeostat/deepgeostat-web:latest}
+        command: [ "php",
+                   "artisan",
+                   "queue:work",
+                   "--verbose",
+                   "--tries=3" ]
+        restart: unless-stopped
+        deploy:
+            mode: replicated
+            replicas: 4
+        tty: true
+        depends_on:
+            - web-app
+        volumes:
+            # Needed for normal operation
+            -   type: volume
+                source: web-cache
+                target: /var/www/html/bootstrap/cache
+
+            # Needed for normal operation
+            -   type: volume
+                source: web-storage
+                target: /var/www/html/storage
+
+            # Needed for normal operation
+            -   type: bind
+                source: ${ENV_LOCATION:?directory to .env file}
+                target: /var/www/html/.env
+
+            # Needed for normal operation
+            -   type: bind
+                source: ${PHP_CONF_LOCATION:?directory to the php.ini file}
+                target: /usr/local/etc/php/conf.d/php.ini
+        networks:
+            - app-network
+
+    web-scheduler:
+        image: ${DOCKER_WEB_APP_IMAGE:-registry.gitlab.com/cbds/deepgeostat/deepgeostat-web:latest}
+        command: [ "/bin/bash",
+                   "-c",
+                   "while [ true ]; do php artisan schedule:run --verbose --no-interaction & sleep 60; done" ]
+        restart: unless-stopped
+        stop_signal: SIGKILL
+        tty: true
+        depends_on:
+            - web-app
+        volumes:
+            # Needed for normal operation
+            -   type: volume
+                source: web-cache
+                target: /var/www/html/bootstrap/cache
+
+            # Needed for normal operation
+            -   type: volume
+                source: web-storage
+                target: /var/www/html/storage
+
+            # Needed for normal operation
+            -   type: bind
+                source: ${ENV_LOCATION:?directory to .env file}
+                target: /var/www/html/.env
+
+            # Needed for normal operation
+            -   type: bind
+                source: ${PHP_CONF_LOCATION:?directory to the php.ini file}
+                target: /usr/local/etc/php/conf.d/php.ini
+        networks:
+            - app-network
+
+    web-sockets:
+        image: ${DOCKER_WEB_APP_IMAGE:-registry.gitlab.com/cbds/deepgeostat/deepgeostat-web:latest}
+        command: [ "php",
+                   "artisan",
+                   "websockets:serve" ]
+        restart: unless-stopped
+        stop_signal: SIGKILL
+        tty: true
+        depends_on:
+            - web-app
+        volumes:
+            # Needed for normal operation
+            -   type: volume
+                source: web-cache
+                target: /var/www/html/bootstrap/cache
+
+            # Needed for normal operation
+            -   type: volume
+                source: web-storage
+                target: /var/www/html/storage
+
+            # Needed for normal operation
+            -   type: bind
+                source: ${ENV_LOCATION:?directory to .env file}
+                target: /var/www/html/.env
+
+            # Needed for normal operation
+            -   type: bind
+                source: ${PHP_CONF_LOCATION:?directory to the php.ini file}
+                target: /usr/local/etc/php/conf.d/php.ini
+        networks:
+            - app-network
+        ports:
+            - 6001:6001
+
+
+    pgsql:
+        image: ${DOCKER_PGSQL_IMAGE:-postgis/postgis:latest}
+        environment:
+            PGPASSWORD: "${DB_PASSWORD:-secret}"
+            POSTGRES_DB: "${DB_DATABASE}"
+            POSTGRES_USER: "${DB_USERNAME}"
+            POSTGRES_PASSWORD: "${DB_PASSWORD:-secret}"
+        restart: unless-stopped
+        tty: true
+        volumes:
+            # Needed for normal operation
+            -   type: volume
+                source: db-data
+                target: /var/lib/postgresql/data
+        networks:
+            - app-network
+        healthcheck:
+            test: [ "CMD",
+                    "pg_isready",
+                    "-q",
+                    "-d",
+                    "${DB_DATABASE}",
+                    "-U",
+                    "${DB_USERNAME}" ]
+            retries: 3
+            timeout: 5s
+
+    web-redis:
+        image: ${DOCKER_WEB_REDIS_IMAGE:-redis/redis-stack-server}
+        restart: unless-stopped
+        tty: true
+        volumes:
+            -   type: volume
+                source: web-redis
+                target: /data
+        networks:
+            - app-network
+        ports:
+            - "6379:6379"
+        healthcheck:
+            test: [ "CMD",
+                    "redis-cli",
+                    "ping" ]
+            retries: 3
+            timeout: 5s
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    web-data:
+        driver: local
+    web-cache:
+        driver: local
+    web-storage:
+        driver: local
+    db-data:
+        driver: local
+    web-redis:
+        driver: local
+

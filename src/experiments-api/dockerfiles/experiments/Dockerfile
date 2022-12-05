@@ -1,0 +1,26 @@
+FROM nvidia/cuda:11.0.3-cudnn8-runtime-ubuntu20.04
+
+ENV TZ=Europe/Amsterdam \
+    DEBIAN_FRONTEND=noninteractive
+
+WORKDIR /usr/deepgeostat-ai/app
+
+COPY requirements-11.0.3.txt /usr/deepgeostat-ai/app/requirements.txt
+
+RUN apt-get update \
+#  && apt-get dist-upgrade -y \
+ && apt-get install -y \
+    curl \
+    ffmpeg \
+    libsm6 \
+    libxext6 \
+    pkg-config \
+    libcairo2-dev \
+    python3-pip \
+    python3-distutils \
+    software-properties-common \
+ && python3.8 -m pip install --no-cache-dir --upgrade pip \
+ && python3.8 -m pip install --no-cache-dir --upgrade -r /usr/deepgeostat-ai/app/requirements.txt \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* \
+           /usr/deepgeostat-ai/app/requirements.txt

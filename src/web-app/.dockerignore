@@ -1,0 +1,26 @@
+# Docker files
+/docker
+.dockerignore
+docker-compose.*
+
+# Github files
+.gitignore
+.gitattributes
+
+# Laravel files
+/tests
+/logs
+/pint_logs
+/pint
+/bootstrap/cache/*
+/node_modules/
+/vendor/
+.env.example
+
+# Universal files
+.editorconfig
+README.md
+/container_conf
+
+# JetBrains files
+.idea
