@@ -33,16 +33,20 @@ The goals of the Eurostat funded project were twofold. First, we researched new 
 DeepGeoStat enforces a strict workflow, where most steps include different methodological challenges. These challenges are researched by SN’s methodology department and the resulting best practices are implemented in the DeepStat workflow. These challenges include effective annotation and consolidation strategies, tailored deep learning network structures and learning strategies, and sound validation (explanation) of model output.
 
 1 - Project: 
+
 Decide the project methodology and target labels (i.e., what is that you want to classify?).
 
-2 - Data
+2 - Data:
+
 Select (sample) image data (X) from fixed set of aerial- and satellite-image datasets.
 Collect so-called label evidence (y’i...x) via registers, custom label sets or via annotation campaigns.
 
-3 - Inspect
+3 - Inspect:
+
 Consolidate the label evidence (y’i...x) to get final labels (y) and inspect quality of image-label pairs {X,y}
 If image-label pairs are of good quality, save (subset of) data as so-called experiment data. If image-label pairs are flawed, revisit step 2.
 
-4 - Experiments
+4 - Experiments:
+
 Test and validate various pre-configured convolutional deep learning networks on the experiment data
 Export country-wide model predictions (csv), input for the (more efficient) creation of official statistics.
