@@ -151,3 +151,6 @@ cd experiments-api \
 ```shell
 docker compose -f docker-compose.dev.yml up -d
 ```
+### Starting the tool
+
+The should now be accessible from your internet browser via http://localhost/login.
