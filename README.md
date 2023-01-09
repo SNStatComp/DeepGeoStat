@@ -47,8 +47,7 @@ Export country-wide model predictions (csv), input for the (more efficient) crea
 
 # DeepGeoStat
 
-This is the repository for the DeepGeoStat project. DeepGeoStat uses Docker containers to run its services.
-The project consists of two main components for which separate Docker containers are built:
+This is the repository for the DeepGeoStat project. DeepGeoStat uses Docker containers to run its services. It is assumed that Docker technology is installed (and all prerequisites for that). The project itself consists of two main components for which separate Docker containers are built:
 
   * The web application;
   * The API.
