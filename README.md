@@ -3,18 +3,12 @@
 #### The starting point of project
 
 Statistics Netherlands (SN) has huge amounts of data, collected through surveys and/or via (3rd party) administrative data. This data is used for computing official statistics. But collecting this data may be time consuming and costly.
-
-			+
       
 Each year, SN receives aerial and satellite images - Earth Observation (EO) data - of the Netherlands. Some statistical concepts may be automatically derived (or classified) from such data. 
-
-			+
       
 The field of Deep Learning (DL) has made great strides with respect to image classification. Classifying images automatically can save huge amounts of time (as compared to manual inspection). However, working with big data and the bleeding edge of DL requires niche IT- and data-science skills, skills that people at statistical divisions at SN typically don’t have.
 
-			=
-      
-The goals of the Eurostat funded project were twofold. First, we researched new methodologies - using DL on EO Data - that can automatically generate official statistics, or make the process of creating official statistics more efficient. Secondly, proven technology was made available to the end users at statistical divisions via a user-friendly tool.
+The above facts lead to this project. The goals of the Eurostat funded project were twofold. First, we researched new methodologies - using DL on EO Data - that can automatically generate official statistics, or make the process of creating official statistics more efficient. Secondly, proven technology was made available to the end users at statistical divisions via a user-friendly tool.
 
 #### The niche of the tool
 
