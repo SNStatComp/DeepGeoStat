@@ -1,5 +1,8 @@
 # DeepGeoStat
 
+*NOTE: this repo is output of a research project (2022). At this moment the tool is not usable in practice and further development has been stopped.
+We do however keep the results available here for those interested.* 
+
 #### The starting point of project
 
 Statistics Netherlands (SN) has huge amounts of data, collected through surveys and/or via (3rd party) administrative data. This data is used for computing official statistics. But collecting this data may be time consuming and costly.
